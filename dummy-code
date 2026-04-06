@@ -1,0 +1,830 @@
+from pymongo import MongoClient
+
+client = MongoClient("mongodb+srv://sunflower16052023_db_user:zuFl0vVZurIeV7jn@cluster0.3nnbzvu.mongodb.net/?retryWrites=true&w=majority&authSource=admin")
+
+db = client["phishing_detector"]
+
+scans_collection = db["scans"]
+stats_collection = db["stats"]
+print(db.list_collection_names())
+
+import pandas as pd
+import tldextract
+from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from sklearn.ensemble import RandomForestClassifier
+import logging
+import whois
+from datetime import datetime
+import math
+import re
+import socket
+from dotenv import load_dotenv
+import os
+
+# ── App Stats & History ─────────────────────────────
+stats = {
+    "total_scans": 0,
+    "scams_detected": 0,
+    "warnings": 0
+}
+
+history = []
+MAX_HISTORY = 50
+#------------------------------------------------------
+
+load_dotenv()
+
+ENDEE_URL = os.getenv("ENDEE_URL", "http://localhost:8080")
+
+# ── Endee / embeddings ─────────────────────────────────────
+embedding_model = None
+
+try:
+    from sentence_transformers import SentenceTransformer
+    import requests as http_requests
+
+    ENDEE_AVAILABLE = False
+    embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+
+    print("[Endee] Embedding model loaded ✓")
+
+except Exception as e:
+    ENDEE_AVAILABLE = False
+    embedding_model = None
+    print(f"[Endee] Not available – running without vector search. ({e})")
+
+app = Flask(__name__)
+CORS(app)
+socket.setdefaulttimeout(3)
+
+
+@app.errorhandler(Exception)
+def handle_global_error(e):
+    logger.error(f"Unhandled Exception: {str(e)}")
+    
+    return jsonify({
+        "status": "ERROR",
+        "message": "Something went wrong on the server"
+    }), 500
+
+
+@app.after_request
+def apply_security_headers(response):
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    return response
+
+
+# ── Rate Limiting ─────────────────────────────────────────
+# Prevents abuse: each IP can make max 100 requests/hour
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["60 per hour"],
+    storage_uri="memory://"
+)
+
+# ── Logging Setup ─────────────────────────────────────────
+# Tracks all activity in terminal — like CCTV for your API
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
+
+file_handler = logging.FileHandler('app.log')
+file_handler.setLevel(logging.INFO)
+
+formatter = logging.Formatter(
+    '%(asctime)s [%(levelname)s] %(message)s'
+)
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
+# ─────────────────────────── GLOBAL DATA ─────────────────────────────────────
+blacklist = set()
+reported_numbers = {"+919876543210", "9000011111"}
+stats = {"total_scans": 0, "scams_detected": 0, "community_reports": 0}
+
+# ─────────────────────────── ML TRAINING ─────────────────────────────────────
+feature_names = [
+    'dots', 'is_ip', 'has_brand', 'is_shortened',
+    'url_length', 'has_https', 'domain_length', 'is_typosquat'
+]
+data_dict = {
+    'dots':          [1,4,1,5,2,6,1,4,2,1,3, 2,3,1,4,2,5,1,3,2, 1,6,2,4,1,3,5,2,4,1],
+    'is_ip':         [0,0,0,1,0,1,0,0,0,1,0, 0,0,0,1,0,1,0,0,0, 0,1,0,0,0,0,1,0,0,1],
+    'has_brand':     [0,1,0,1,0,1,0,1,1,0,1, 0,1,1,1,0,1,0,1,0, 0,1,1,1,0,0,1,1,1,0],
+    'is_shortened':  [0,0,0,1,0,0,0,1,0,0,1, 0,0,0,1,0,0,0,1,0, 0,0,0,1,0,0,0,0,1,0],
+    'url_length':    [20,55,18,70,30,80,22,65,28,40,60, 15,58,72,85,20,90,18,55,25, 12,95,45,75,22,35,88,50,68,42],
+    'has_https':     [1,0,1,0,1,0,1,0,1,0,0, 1,0,0,0,1,0,1,0,1, 1,0,0,0,1,1,0,0,0,0],
+    'domain_length': [8,15,6,18,10,22,7,16,9,12,14, 6,20,25,28,8,30,7,19,9, 5,32,11,22,7,10,26,14,24,13],
+    'is_typosquat':  [0,1,0,1,0,1,0,0,1,0,1, 0,1,1,0,0,1,0,1,0, 0,1,0,1,0,0,1,0,1,0],
+    'label':         [0,1,0,1,0,1,0,1,1,1,1, 0,1,1,1,0,1,0,1,0, 0,1,1,1,0,0,1,1,1,1]
+}
+df = pd.DataFrame(data_dict)
+model = RandomForestClassifier(n_estimators=300, random_state=42)
+model.fit(df[feature_names], df['label'])
+print("[ML] Random Forest trained with 8 features ✓")
+
+# ─────────────────────────── THREAT INTELLIGENCE DATABASES ───────────────────
+
+ABUSED_LEGIT_HOSTS = [
+    'docs.google.com','drive.google.com','forms.gle',
+    'github.io','raw.githubusercontent.com','dropbox.com',
+    'onedrive.live.com','firebaseapp.com','web.app',
+    'notion.site','netlify.app','vercel.app','workers.dev','pages.dev','glitch.me'
+]
+
+SUSPICIOUS_PATH_WORDS = [
+    'login','verify','account','secure','update','confirm',
+    'paypal','sbi','hdfc','bank','kyc','suspended','blocked',
+    'reward','prize','free','claim','password','credentials','otp','aadhar','pan'
+]
+
+TYPOSQUAT_TARGETS = [
+    ('google',    ['go0gle','g00gle','googIe','goog1e','gooogle']),
+    ('paypal',    ['paypa1','paypaI','paypall','paypai']),
+    ('amazon',    ['amaz0n','amazom','arnazon','amazzon']),
+    ('netflix',   ['netfl1x','netf1ix','netfflix']),
+    ('apple',     ['app1e','appl3','appie']),
+    ('microsoft', ['micros0ft','micosoft']),
+    ('facebook',  ['faceb00k','faceboook','facebok']),
+    ('instagram', ['1nstagram','instagramm','lnstagram']),
+    ('hdfc',      ['hdf0','hdtc','hdfcc']),
+    ('sbi',       ['sb1','sbl','s8i']),
+]
+
+EVASION_PATTERNS = [
+    (r'blob:',                     "Blob URI (Memory-Only, Undetectable by Crawlers)"),
+    (r'[?&]redirect=',             "Open Redirect Parameter"),
+    (r'[?&]url=http',              "URL Injection Parameter"),
+    (r'[?&]goto=',                 "Goto Redirect Parameter"),
+    (r'%[0-9a-f]{2}%[0-9a-f]{2}', "Double URL Encoding (Obfuscation)"),
+]
+
+SUSPICIOUS_DOMAIN_WORDS = [
+    'bank','secure','login','verify','update','account','payment','service',
+    'support','portal','official','alert','confirm','free','prize','lucky',
+    'win','reward','cashback','gift','lottery','restaurant','catering','garden',
+    'shop','store','market','trade','solutions','services','group','enterprise',
+    'global','india','wallet','kyc','otp',
+]
+
+SMS_SCAM_VECTORS = {
+    'urgency':    {
+        'keywords': ['immediately','today','blocked','warning','24 hours','expired',
+                     'suspended','arrest','legal action',
+                     'turant','abhi','aaj','band','rokna','khatam'],
+        'score': 35, 'label': '🚨 Urgency / Pressure Tactic'
+    },
+    'financial':  {
+        'keywords': ['won','lottery','cashback','gift','prize','reward','kbc',
+                     'refund','credited','free','lucky draw','jackpot',
+                     'gpay','phonepe','bhim','paytm','upi','transfer now'],
+        'score': 30, 'label': '💰 Financial Bait / UPI Scam'
+    },
+    'otp_fraud':  {
+        'keywords': ['otp','one time password','share otp','enter otp',
+                     'verification code','6 digit code','otp mat share'],
+        'score': 40, 'label': '🔐 OTP Fraud Attempt'
+    },
+    'job_scam':   {
+        'keywords': ['job offer','work from home','earn daily','part time',
+                     'per day earning','registration fee','joining fee',
+                     'salary package','immediate joining','data entry job'],
+        'score': 30, 'label': '💼 Fake Job Offer Scam'
+    },
+    'loan_scam':  {
+        'keywords': ['instant loan','loan approved','pre approved loan',
+                     'low interest loan','apply now loan','loan disburse',
+                     'personal loan offer','loan without documents'],
+        'score': 30, 'label': '🏦 Fake Loan Offer Scam'
+    },
+    'action':     {
+        'keywords': ['click','bit.ly','tinyurl','verify','link','update',
+                     'http','.apk','download','install','scan qr'],
+        'score': 25, 'label': '🔗 Suspicious Call-to-Action'
+    },
+    'authority':  {
+        'keywords': ['bank','kyc','official','department','manager','support',
+                     'rbi','income tax','trai','police','government','court'],
+        'score': 20, 'label': '🏛️ Authority Impersonation'
+    },
+    'ai_crafted': {
+        'keywords': ['following up','as discussed','as mentioned','per our call',
+                     'regarding your','as per our email','completing your kyc'],
+        'score': 20, 'label': '🤖 AI-Crafted Contextual Lure'
+    },
+    'quishing':   {
+        'keywords': ['scan qr','qr code','scan this','scan the code','scan below'],
+        'score': 25, 'label': '📷 QR Code Phishing (Quishing)'
+    },
+}
+
+# ─────────────────────────── ENDEE HELPERS ───────────────────────────────────
+
+PHISHING_PATTERNS = [
+    {"id":"p1",  "text":"verify your bank account immediately or it will be suspended","label":"phishing"},
+    {"id":"p2",  "text":"you won a lottery click here to claim your prize","label":"phishing"},
+    {"id":"p3",  "text":"your paypal account has been limited please login now","label":"phishing"},
+    {"id":"p4",  "text":"urgent kyc update required your account will be blocked","label":"phishing"},
+    {"id":"p5",  "text":"sbi yono bank account suspended update details","label":"phishing"},
+    {"id":"p6",  "text":"click this link to get free cashback reward","label":"phishing"},
+    {"id":"p7",  "text":"electricity bill payment link official government portal","label":"phishing"},
+    {"id":"p8",  "text":"netflix subscription expired update payment method","label":"phishing"},
+    {"id":"p9",  "text":"amazon delivery failed reschedule your package now","label":"phishing"},
+    {"id":"p10", "text":"apple id verification required immediately","label":"phishing"},
+    {"id":"p11", "text":"following up on the email we sent about your delivery","label":"phishing"},
+    {"id":"p12", "text":"as per our call please verify your identity to continue","label":"phishing"},
+    {"id":"p13", "text":"your google drive file has been shared click to view","label":"phishing"},
+    {"id":"p14", "text":"github repository access request please confirm login","label":"phishing"},
+    {"id":"p15", "text":"your microsoft account suspicious activity detected verify","label":"phishing"},
+    {"id":"s1",  "text":"your monthly bank statement is ready to download","label":"safe"},
+    {"id":"s2",  "text":"order confirmation thank you for your purchase","label":"safe"},
+    {"id":"s3",  "text":"meeting scheduled for tomorrow at 10am","label":"safe"},
+    {"id":"s4",  "text":"your password was changed successfully","label":"safe"},
+    {"id":"s5",  "text":"welcome to our newsletter you can unsubscribe anytime","label":"safe"},
+]
+
+def setup_endee_index():
+    if not ENDEE_AVAILABLE: return
+    try:
+        http_requests.post(f"{ENDEE_URL}/indexes",
+            json={"name":"phishing_patterns","dimension":384,"metric":"cosine"}, timeout=5)
+        for item in PHISHING_PATTERNS:
+            vector = embedding_model.encode(item["text"]).tolist()
+            http_requests.post(f"{ENDEE_URL}/indexes/phishing_patterns/vectors",
+                json={"id":item["id"],"vector":vector,
+                      "payload":{"text":item["text"],"label":item["label"]}}, timeout=5)
+        print(f"[Endee] Loaded {len(PHISHING_PATTERNS)} patterns ✓")
+    except Exception as e:
+        print(f"[Endee] Setup failed: {e}")
+
+def endee_semantic_search(query_text, top_k=3):
+    if not ENDEE_AVAILABLE: return []
+    try:
+        query_vector = embedding_model.encode(query_text).tolist()
+        response = http_requests.post(
+            f"{ENDEE_URL}/indexes/phishing_patterns/search",
+            json={"vector":query_vector,"top_k":top_k}, timeout=5)
+        return response.json().get("results", [])
+    except Exception as e:
+        print(f"[Endee] Search failed: {e}")
+        return []
+
+setup_endee_index()
+
+# ─────────────────────────── UTILITIES ───────────────────────────────────────
+
+def calculate_entropy(text):
+    if not text: return 0
+    probs = [text.count(c)/len(text) for c in set(text)]
+    return -sum(p*math.log2(p) for p in probs)
+
+def get_live_domain_age(domain):
+    if not domain or '.' not in domain or domain.endswith('.local'): return 0
+    try:
+        w = whois.whois(domain)
+        cd = w.creation_date
+        if isinstance(cd, list): cd = cd[0]
+        if cd and isinstance(cd, datetime):
+            return (datetime.now() - cd.replace(tzinfo=None)).days
+    except Exception: pass
+    return 0
+
+def check_typosquatting(domain_part):
+    for legit, variants in TYPOSQUAT_TARGETS:
+        if any(v in domain_part for v in variants):
+            return True, legit
+    return False, None
+
+def check_abused_legitimate(url):
+    for host in ABUSED_LEGIT_HOSTS:
+        if host in url:
+            path = url.split(host)[-1]
+            path_hits = sum(1 for w in SUSPICIOUS_PATH_WORDS if w in path)
+            return True, path_hits, host
+    return False, 0, None
+
+def check_evasion_patterns(url):
+    return [(label, p) for p, label in EVASION_PATTERNS if re.search(p, url)]
+
+def count_suspicious_domain_words(domain_name):
+    return sum(1 for w in SUSPICIOUS_DOMAIN_WORDS if w in domain_name)
+
+# ─────────────────────────── URL ANALYSIS ENGINE ─────────────────────────────
+
+
+import re
+import tldextract
+
+def extract_features(url):
+    url = url.lower()
+
+    ext = tldextract.extract(url)
+    domain = ext.domain
+
+    features = {}
+
+    # 1. dots
+    features["dots"] = url.count('.')
+
+    # 2. is_ip
+    features["is_ip"] = 1 if re.match(r'^\d{1,3}(\.\d{1,3}){3}', url) else 0
+
+    # 3. has_brand
+    brands = [
+        "google","facebook","amazon","microsoft","apple",
+        "paypal","bank","instagram","netflix","sbi","hdfc","axis","paytm"
+    ]
+    features["has_brand"] = 1 if any(b in url for b in brands) else 0
+
+    # 4. is_shortened
+    shorteners = ["bit.ly","tinyurl.com","goo.gl","t.co","rebrand.ly"]
+    features["is_shortened"] = 1 if any(s in url for s in shorteners) else 0
+
+    # 5. url_length
+    features["url_length"] = len(url)
+
+    # 6. has_https
+    features["has_https"] = 1 if url.startswith("https") else 0
+
+    # 7. domain_length
+    features["domain_length"] = len(domain)
+
+    # 8. is_typosquat (basic heuristic)
+    suspicious_patterns = ["g00gle","faceb00k","paypa1","micr0soft"]
+    features["is_typosquat"] = 1 if any(p in url for p in suspicious_patterns) else 0
+
+    return features
+
+def analyze_url(url):
+    try:
+        # ── Input Cleaning ─────────────────────────────
+        url = url.lower().strip()
+
+        if not url:
+            return {
+                "status": "SAFE",
+                "score": 0,
+                "reasons": ["Empty URL"],
+                "endee_match": None
+            }
+
+        # ── URL Validation ─────────────────────────────
+        URL_REGEX = re.compile(
+            r'^(https?:\/\/)?(([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,})'
+        )
+
+        if not URL_REGEX.match(url):
+            return {
+                "status": "INVALID",
+                "score": 0,
+                "reasons": ["Invalid URL format"],
+                "endee_match": None
+            }
+
+        # Add https if missing
+        if not url.startswith(('http://', 'https://')):
+            url = 'https://' + url
+
+        # ── Extract Domain ─────────────────────────────
+        ext = tldextract.extract(url)
+        domain_name = ext.domain
+        full_domain = f"{ext.domain}.{ext.suffix}"
+
+        reasons = []
+        risk_score = 0
+
+        # ── 1. IP Domain ───────────────────────────────
+        is_ip = 1 if re.match(r"^\d{1,3}(\.\d{1,3}){3}$", domain_name) else 0
+        if is_ip:
+            risk_score += 30
+            reasons.append("IP Address as Domain")
+
+        # ── 2. WHOIS Age (SAFE) ────────────────────────
+        try:
+            age = 0 if is_ip else get_live_domain_age(full_domain)
+        except Exception:
+            age = 0
+
+        if age == 0:
+            risk_score += 40
+            reasons.append("Unverified/Private Domain Registration")
+        elif age < 30:
+            risk_score += 50
+            reasons.append("Newly Registered Domain (<30 days)")
+
+        # ── 3. Brand Impersonation ─────────────────────
+        brands = ['paypal','google','sbi','hdfc','axis','netflix','amazon','apple','kyc','bank','yono','paytm','microsoft','instagram']
+        official = ['paypal.com','google.com','sbi.co.in','hdfcbank.com','amazon.in','apple.com','paytm.com','microsoft.com','instagram.com']
+
+        has_brand = any(b in url for b in brands)
+        if has_brand and not any(o in full_domain for o in official):
+            risk_score += 45
+            reasons.append("High-Risk Brand Impersonation")
+
+        # ── 4. TLD / Entropy / HTTPS ───────────────────
+        if any(url.endswith(t) for t in ['.tk','.ml','.ga','.cf','.top','.xyz','.site','.online']):
+            risk_score += 30
+            reasons.append("Low-Trust TLD")
+
+        entropy = calculate_entropy(domain_name)
+        if entropy > 3.9:
+            risk_score += 20
+            reasons.append("Suspicious Random Character Pattern")
+
+        if not url.startswith('https://'):
+            risk_score += 15
+            reasons.append("HTTP Only (No SSL)")
+
+        # ── 5. Domain Length ───────────────────────────
+        domain_length = len(domain_name)
+        if domain_length > 25:
+            risk_score += 30
+            reasons.append(f"Very Long Domain ({domain_length} chars)")
+        elif domain_length > 20:
+            risk_score += 15
+            reasons.append(f"Long Domain Name ({domain_length} chars)")
+
+        # ── 6. Suspicious Words ────────────────────────
+        word_hits = count_suspicious_domain_words(domain_name)
+        if word_hits >= 3:
+            risk_score += 25
+            reasons.append(f"Multiple Suspicious Keywords ({word_hits})")
+        elif word_hits == 2:
+            risk_score += 12
+            reasons.append(f"Suspicious Keyword Combo ({word_hits})")
+
+        # ── 7. Single Segment Domain ───────────────────
+        dots = url.count('.')
+        if dots <= 1 and domain_length > 15:
+            risk_score += 15
+            reasons.append("Long Single-Segment Domain")
+
+        # ── 8. Typosquatting ───────────────────────────
+        is_typo, typo_target = check_typosquatting(full_domain)
+        if is_typo:
+            risk_score += 50
+            reasons.append(f"Typosquatting: mimics {typo_target}")
+
+        # ── 9. Abused Legit Platforms ──────────────────
+        is_abused, path_hits, abused_host = check_abused_legitimate(url)
+        if is_abused:
+            risk_score += 50 + (path_hits * 15)
+            reasons.append(f"Abused Trusted Platform ({abused_host})")
+
+        # ── 10. Evasion Patterns ───────────────────────
+        for label, _ in check_evasion_patterns(url):
+            risk_score += 25
+            reasons.append(f"Evasion: {label}")
+
+        # ── 11. @ Trick ────────────────────────────────
+        if '@' in url and '://' in url:
+            risk_score += 40
+            reasons.append("@ Symbol Trick")
+
+        # ── 12. ML Model (SAFE) ────────────────────────
+        shorteners = ['bit.ly','goo.gl','tinyurl','t.co','rebrand.ly']
+        is_shortened = 1 if any(s in url for s in shorteners) else 0
+        url_length = len(url)
+        has_https = 1 if url.startswith('https://') else 0
+        is_typosquat = 1 if is_typo else 0
+
+        features = extract_features(url)
+
+        input_df = pd.DataFrame([[
+            features["dots"],
+            is_ip,
+            1 if has_brand else 0,
+            is_shortened,
+            features["url_length"],
+            features["has_https"],
+            features["domain_length"],
+            1 if is_typo else 0,
+        ]], columns=[
+            "dots","is_ip","has_brand","is_shortened",
+            "url_length","has_https","domain_length","is_typosquat"
+        ])
+
+        try:
+            pred = model.predict(input_df)[0]
+            prob = model.predict_proba(input_df)[0][1]   # probability of phishing
+            confidence = round(prob * 100, 2)
+
+            if pred == 1:
+                risk_score += 25
+                reasons.append(f"ML flagged suspicious pattern ({confidence}% confidence)")
+                
+        except Exception as e:
+            logger.warning(f"ML error: {e}")
+            confidence = 0
+
+        # ── 13. Endee (SAFE) ───────────────────────────
+        endee_result = None
+        similar = []
+
+        if ENDEE_AVAILABLE:
+            try:
+                similar = endee_semantic_search(url)
+            except Exception:
+                similar = []
+
+        if similar:
+            top = similar[0]
+            sim = top.get("score", 0)
+            label = top.get("payload", {}).get("label", "unknown")
+
+            endee_result = {
+            "similarity": round(sim * 100, 1),
+            "matched_pattern": top.get("payload", {}).get("text", "")
+            }
+
+            if sim > 0.75 and label == "phishing":
+                risk_score += 30
+                reasons.append("Semantic phishing match")
+
+        # ── 14. Numeric Domain ─────────────────────────
+        if domain_name.isdigit():
+            risk_score += 35
+            reasons.append("Numeric-only domain")
+
+        # ── 15. Safe Path Extraction ───────────────────
+        try:
+            full_url_path = url.split(full_domain, 1)[-1]
+        except Exception:
+            full_url_path = ""
+
+        suspicious_ext = ['.php','.asp','.aspx','.exe','.apk']
+        if any(ext in full_url_path for ext in suspicious_ext):
+            risk_score += 20
+            reasons.append("Suspicious file in URL")
+
+        # ── 16. Query Params ───────────────────────────
+        if '?' in url and any(p in url for p in ['token=', 'session=', 'uid=']):
+            risk_score += 15
+            reasons.append("Suspicious query params")
+
+        # ── 17. Path Depth ─────────────────────────────
+        if full_url_path.count('/') >= 3:
+            risk_score += 20
+            reasons.append("Deep path structure")
+
+        final_score = min(risk_score, 100)
+        status = "SCAM" if final_score >= 75 else ("WARNING" if final_score >= 40 else "SAFE")
+
+        # ── Update stats ─────────────────────────────
+        stats["total_scans"] += 1
+
+        if status == "SCAM":
+            stats["scams_detected"] += 1
+        elif status == "WARNING":
+            stats["warnings"] += 1
+
+        # ── Save history ─────────────────────────────
+        scan_entry = {
+            "url": url,
+            "status": status,
+            "score": final_score,
+            "time": datetime.now().strftime("%H:%M:%S")
+        }
+
+        history.insert(0, scan_entry)
+
+        if len(history) > MAX_HISTORY:
+            history.pop()
+
+        # ── Return response ─────────────────────────────
+        return {
+            "status": status,
+            "score": final_score,
+            "confidence": confidence,
+            "reasons": list(set(reasons)),
+            "endee_match": endee_result,
+            "details": {
+                "age_days": age,
+                "is_secure": url.startswith('https'),
+                "entropy": round(entropy, 2),
+                "domain_length": domain_length,
+                "word_hits": word_hits,
+                "is_typosquat": is_typo,
+                "abused_host": abused_host
+            }
+        }
+
+    except Exception as e:
+        logger.error(f"Critical error in analyze_url: {str(e)}")
+        return {
+            "status": "ERROR",
+            "score": 0,
+            "reasons": ["Internal processing error"],
+            "endee_match": None
+        }
+
+# ─────────────────────────── SMS ANALYSIS ENGINE ─────────────────────────────
+
+def analyze_sms_text(text):
+    text_lower = text.lower()
+    score=0; detections=[]
+
+    for vector_name, data in SMS_SCAM_VECTORS.items():
+        if any(kw in text_lower for kw in data['keywords']):
+            score += data['score']
+            detections.append(data['label'])
+
+    endee_result = None
+    similar = endee_semantic_search(text)
+    if similar:
+        top = similar[0]; sim = top.get("score",0)
+        if sim>0.75 and top.get("payload",{}).get("label")=="phishing":
+            score+=20
+            endee_result={"similarity":round(sim*100,1),"matched_pattern":top.get("payload",{}).get("text","")}
+            detections.append(f"⚡ Endee: {round(sim*100)}% Semantic Match to Known Phishing")
+
+    status = "SCAM" if score>=55 else ("WARNING" if score>=25 else "SAFE")
+    if status=="SCAM": stats["scams_detected"]+=1
+    return {"status":status,"score":min(score,100),"detections":detections,"endee_match":endee_result}
+
+# ─────────────────────────── ROUTES ──────────────────────────────────────────
+
+@app.route("/")
+def home(): return render_template("index.html")
+
+@app.route('/detect', methods=['GET', 'POST'])
+@limiter.limit("20 per minute")   # Max 20 scans/min per IP — stops spam attacks
+def detect():
+    # ── Input Validation ──────────────────────────────────
+    data = request.get_json()
+
+    # Check: is JSON body present and has 'url' key?
+    if not data or "url" not in data:
+        logger.warning("Bad request: missing URL in body")
+        return jsonify({"error": "No URL provided"}), 400
+
+    # Check: clean the input — remove whitespace
+    url = data.get("url", "").strip()
+
+    # Check: is URL empty after cleaning?
+    if not url:
+        logger.warning("Bad request: empty URL received")
+        return jsonify({"error": "URL cannot be empty"}), 400
+
+    # Check: is URL suspiciously long? (normal URLs < 2048 chars)
+    if len(url) > 2048:
+        logger.warning(f"Bad request: URL too long ({len(url)} chars)")
+        return jsonify({"error": "URL too long (max 2048 characters)"}), 400
+
+    # Fix: add https:// if user forgot it
+    if not re.match(r'https?://', url):
+        url = 'https://' + url
+
+    # ── Log the scan ──────────────────────────────────────
+    logger.info(f"URL scan requested: {url[:80]}")
+
+    stats["total_scans"] += 1
+
+    if url.lower() in blacklist:
+        logger.info(f"Blacklisted URL blocked: {url[:80]}")
+        return jsonify({"status":"SCAM","score":100,"reasons":["Community Blacklisted"],"endee_match":None})
+
+    result = analyze_url(url)
+        # Save to MongoDB
+    scans_collection.insert_one({
+    "url": url,
+    "result": result,
+    "timestamp": datetime.now()
+    })
+    return jsonify(result)
+
+@app.route('/analyze-sms', methods=['POST'])
+@limiter.limit("30 per minute")   # SMS analysis limit
+def analyze_sms():
+    data = request.get_json()
+    if not data or "text" not in data:
+        return jsonify({"error": "No text provided"}), 400
+
+    text = data.get("text", "").strip()
+    if not text:
+        return jsonify({"error": "Text cannot be empty"}), 400
+    if len(text) > 5000:
+        return jsonify({"error": "Text too long (max 5000 characters)"}), 400
+
+    logger.info(f"SMS scan: '{text[:50]}...'")
+    stats["total_scans"] += 1
+    result = analyze_sms_text(text)
+    logger.info(f"SMS result: {result['status']} (score={result['score']})")
+    return jsonify({"status":result["status"],"score":result["score"],
+                    "reasons":result["detections"],"endee_match":result["endee_match"]})
+
+@app.route('/report-scam', methods=['POST'])
+def report_scam():
+    data = request.json; url = data.get("url","").lower().strip()
+    if url: blacklist.add(url); stats["community_reports"]+=1; return jsonify({"status":"SUCCESS"})
+    return jsonify({"status":"FAILED"}),400
+
+# ── Expanded Scam Number Database ───────────────────────────────────────────
+KNOWN_SCAM_NUMBERS = {
+    "9876543210": "Electricity Bill Scam",
+    "9000011111": "Fake KYC Update",
+    "8800000000": "Lottery / Prize Fraud",
+    "7777777777": "KBC Scam",
+    "9999999999": "Fake Bank Support",
+    "8888888888": "Insurance Fraud",
+    "9090909090": "Fake Government Scheme",
+    "7700900900": "Telecom Fraud",
+}
+INDIAN_SCAM_PREFIXES = ['700', '900']
+
+@app.route('/check-number', methods=['POST'])
+@limiter.limit("30 per minute")
+def check_number():
+    data = request.get_json()
+    if not data or "number" not in data:
+        return jsonify({"error": "No number provided"}), 400
+
+    number = data.get('number', '').strip().replace(' ', '').replace('-', '')
+    if not number:
+        return jsonify({"error": "Number cannot be empty"}), 400
+
+    logger.info(f"Phone check: {number[:6]}****")  # Log only first 6 digits for privacy
+    stats["total_scans"] += 1
+
+    # Normalize Indian number
+    clean = number
+    if clean.startswith('+91'): clean = clean[3:]
+    if clean.startswith('0'):   clean = clean[1:]
+
+    score = 0; reasons = []
+
+    # 1. Known reported scam number
+    if clean in KNOWN_SCAM_NUMBERS:
+        stats["scams_detected"] += 1
+        return jsonify({
+            "status":  "SCAM", "score": 95,
+            "reasons": [f"Community Reported: {KNOWN_SCAM_NUMBERS[clean]}",
+                        "Flagged in PhishGuard Database"]
+        })
+
+    # 2. Valid Indian mobile (10 digits, starts with 6-9)
+    if len(clean) != 10:
+        score += 30; reasons.append("Invalid Length — Indian mobile must be 10 digits")
+    elif clean[0] not in '6789':
+        score += 40; reasons.append("Invalid Prefix — Indian mobiles start with 6,7,8,9")
+
+    # 3. Repeating digit pattern (9999999999)
+    if len(set(clean)) <= 3:
+        score += 35; reasons.append("Suspicious Repeating Digit Pattern")
+
+    # 4. Sequential pattern (1234567890)
+    if clean in ['1234567890', '0987654321', '9876543210']:
+        score += 35; reasons.append("Sequential Number — Likely Fake/Test Number")
+
+    # 5. Known scam prefixes
+    if any(clean.startswith(p) for p in INDIAN_SCAM_PREFIXES):
+        score += 20; reasons.append(f"Known Spam Prefix ({clean[:3]}xxx)")
+
+    final  = min(score, 100)
+    status = "SCAM" if final >= 60 else ("WARNING" if final >= 30 else "SAFE")
+    if status == "SCAM": stats["scams_detected"] += 1
+    if not reasons: reasons = ["No community reports — Appears Clean"]
+    return jsonify({"status": status, "score": final, "reasons": reasons})
+
+@app.route('/api/stats')
+def get_live_stats():
+    return jsonify({"total_scans":stats["total_scans"],
+                    "scams_detected":stats["scams_detected"],
+                    "community_reports":stats["community_reports"]})
+
+
+@app.route('/api/stats', methods=['GET'])
+def get_stats():
+    return jsonify(stats)
+
+@app.route('/history', methods=['GET'])
+def get_history():
+    try:
+        scans = list(scans_collection.find().sort("timestamp", -1).limit(10))
+
+        # Convert ObjectId to string
+        for scan in scans:
+            scan["_id"] = str(scan["_id"])
+
+        return jsonify(scans)
+
+    except Exception as e:
+        logger.error(f"History fetch error: {e}")
+        return jsonify({"error": "Failed to fetch history"}), 500
+
+if __name__ == "__main__":
+    # ⚠️ debug=False in production — NEVER expose debug mode publicly
+    # debug=True shows internal errors, file paths, and code to attackers!
+    logger.info("Starting PhishGuard AI server...")
+    app.run(host="0.0.0.0", port=5000)
