@@ -111,7 +111,7 @@ User Input (URL / SMS / Phone / Document / Audio)
 ### Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/PhisGuard.git
+git clone https://github.com/ShivaniSingh-2923/PhisGuard.git
 cd PhisGuard
 ```
 
@@ -199,9 +199,6 @@ PhisGuard/
 
 ![Scan Result](screenshots/result.png)
 
-### XAI Explanation
-
-![XAI](screenshots/xai.png)
 
 ---
 
