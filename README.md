@@ -19,23 +19,41 @@ Phishing and online scams cause billions in losses annually. Traditional detecti
 
 ## 🧠 System Design
 User Input (URL / SMS / Phone / Document / Audio)
-│
-▼
-┌─────────────────────┐
-│ Feature Extraction │ ← dots, entropy, brand check, HTTPS
-└─────────┬───────────┘
-│
-┌─────────▼───────────┐
-│ Random Forest (ML) │ ← scikit-learn, feature engineering
-└─────────┬───────────┘
-│
-┌─────────▼───────────┐
-│ Semantic Analysis │ ← Google APIs + sentence embeddings
-└─────────┬───────────┘
-│
-┌─────────▼───────────┐
-│ Combined Risk Score │ ← Final: SAFE / WARNING / SCAM
-└─────────────────────┘
+        │
+        ▼
+┌────────────────────────────┐
+│ Feature Extraction Engine  │
+│ - URL entropy             │
+│ - WHOIS domain age        │
+│ - HTTPS check             │
+│ - Brand similarity        │
+└────────────┬──────────────┘
+             │
+             ▼
+┌────────────────────────────┐
+│ Machine Learning Model     │
+│ - Random Forest           │
+│ - Feature Engineering     │
+└────────────┬──────────────┘
+             │
+             ▼
+┌────────────────────────────┐
+│ Semantic Analysis Layer    │
+│ - Google APIs             │
+│ - Sentence Embeddings     │
+│ - Context similarity      │
+└────────────┬──────────────┘
+             │
+             ▼
+┌────────────────────────────┐
+│ Risk Scoring Engine        │
+│ - Weighted scoring         │
+│ - ML + heuristic fusion    │
+└────────────┬──────────────┘
+             │
+             ▼
+      Final Output
+ (SAFE / WARNING / SCAM)
 
 
 ---
@@ -78,59 +96,125 @@ User Input (URL / SMS / Phone / Document / Audio)
 - Node.js & npm  
 - Git  
 
+## ⚙️ Setup & Installation
+
+### Prerequisites
+
+* Python 3.8+
+* Node.js & npm
+* Git
+
+---
+
+## 🚀 Steps to Run the Project
+
 ### Step 1 — Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/PhisGuard.git
 cd PhisGuard
-Step 2 — Backend Setup
+```
+
+### Step 2 — Backend Setup
+
+```bash
 pip install -r requirements.txt
 python app.py
-Step 3 — Frontend Setup
+```
+
+### Step 3 — Frontend Setup
+
+```bash
 cd frontend
 npm install
 npm start
-Step 4 — Open the Application
-Visit http://localhost:3000 in your browser
-Scan URLs, SMS, phone numbers, documents, or audio
-📊 Detection Logic
-Check	Weight	Method
-Unverified domain	+40	WHOIS
-New domain <30 days	+50	WHOIS
-Brand impersonation	+45	String matching
-Suspicious TLD	+30	TLD check
-High entropy	+20	Shannon entropy
-HTTP (no SSL)	+15	Protocol check
-ML prediction	+25	Random Forest
-Semantic / Vector match	+30	Google API embeddings + XAI
-
-Final verdict:
-
-SCAM (≥75)
-WARNING (≥40)
-SAFE (<40)
-📁 Project Structure
-PhisGuard/
-├── app.py                # Backend + ML + Semantic Analysis
-├── frontend/             # React + Tailwind UI
-├── templates/            # HTML templates if any
-├── requirements.txt
-├── README.md
-└── ...
-👨‍💻 Author
-
-Built as part of a personal project with emphasis on AI-powered cybersecurity and real-world phishing detection.
+```
 
 ---
 
-✅ **Instructions to use:**  
+## 🌐 Open the Application
 
-1. Open your project folder.  
-2. Replace your existing `README.md` with the text above.  
-3. Save the file.  
-4. Commit and push to GitHub:  
+Visit:
+http://localhost:3000
+
+You can now scan:
+
+* URLs
+* SMS
+* Phone numbers
+* Documents
+* Audio
+
+---
+
+## 📊 Detection Logic
+
+| Check                 | Weight | Method           |
+| --------------------- | ------ | ---------------- |
+| Unverified domain     | +40    | WHOIS            |
+| New domain (<30 days) | +50    | WHOIS            |
+| Brand impersonation   | +45    | String matching  |
+| Suspicious TLD        | +30    | TLD check        |
+| High entropy          | +20    | Shannon entropy  |
+| HTTP (no SSL)         | +15    | Protocol check   |
+| ML prediction         | +25    | Random Forest    |
+| Semantic match        | +30    | Google API + XAI |
+
+---
+
+## 📦 Dataset
+
+Dataset is not included due to size and security reasons.
+You can use any phishing dataset (e.g., Kaggle phishing URLs dataset).
+
+---
+
+## 🚨 Final Verdict Logic
+
+* **SCAM** → Score ≥ 75
+* **WARNING** → Score ≥ 40
+* **SAFE** → Score < 40
+
+---
+
+## 📁 Project Structure
+
+PhisGuard/
+├── app.py                # Backend + ML + Semantic Analysis
+├── frontend/             # React + Tailwind UI
+├── templates/            # HTML templates (if any)
+├── requirements.txt
+├── README.md
+└── ...
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Scan Result
+
+![Scan Result](screenshots/result.png)
+
+### XAI Explanation
+
+![XAI](screenshots/xai.png)
+
+---
+
+## 👨‍💻 Author
+
+Built as a personal project focusing on AI-powered cybersecurity, combining Machine Learning, Feature Engineering, and Explainable AI (XAI) to detect real-world phishing attacks.
+
+---
+
+## 🚀 Update README on GitHub
 
 ```bash
 git add README.md
-git commit -m "Update README with new PhisGuard features, ML, XAI, Google API"
+git commit -m "Update README with final clean version"
 git push
+```

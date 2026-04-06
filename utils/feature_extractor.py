@@ -44,6 +44,10 @@ def extract_features(url: str) -> dict:
 
     # 8. is_typosquat (basic heuristic)
     suspicious_patterns = ["g00gle", "faceb00k", "paypa1", "micr0soft"]
+    POPULAR_BRANDS = [
+    "google", "facebook", "amazon", "paypal",
+    "microsoft", "apple", "netflix", "instagram"
+    ]
     features["is_typosquat"] = 1 if any(p in url for p in suspicious_patterns) else 0
 
     return features

@@ -10,6 +10,7 @@ from services.whois_service import get_live_domain_age
 from services.endee_service import endee_semantic_search
 from utils.constants import FEATURE_NAMES
 from utils.feature_extractor import extract_features
+from modules.brand_detector import detect_fake_brand
 from utils.helpers import (
     calculate_entropy,
     check_typosquatting,
@@ -122,6 +123,11 @@ def analyze_url(url: str) -> dict:
 
         # ── (ALL YOUR EXISTING CHECKS REMAIN SAME) ──
         # 👉 I am NOT removing anything, only adjusting weights where needed
+        is_fake, brand, sim = detect_fake_brand(url)
+
+        if is_fake:
+            risk_score += 40
+            reasons.append(f"Fake domain mimicking {brand} ({sim}% match)")
 
         # Example important adjustment 👇
 
