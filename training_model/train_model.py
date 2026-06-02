@@ -181,14 +181,19 @@ print(classification_report(y_test, y_pred))
 # Save Model
 # ─────────────────────────────────────────────
 
-print("💾 Saving model...")
-# Save model
+# ─────────────────────────────────────────────
+# Save Model
+# ─────────────────────────────────────────────
+
+print("💾 Saving model components locally...")
+
+# ✅ FIX: Save it as a local file name on your machine
 joblib.dump(model, "phishing_model.pkl")
 
 # Save feature order (VERY IMPORTANT)
 joblib.dump(X.columns.tolist(), "feature_columns.pkl")
 
+# Save scaler
 joblib.dump(scaler, "scaler.pkl")
 
-
-print("✅ Model + feature columns saved")
+print("✅ Model, scaler, and feature columns saved locally successfully!")

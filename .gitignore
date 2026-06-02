@@ -9,8 +9,10 @@ node_modules/
 __pycache__/
 *.pyc
 
-# dataset (large files)
+# Ignore heavy training datasets
 dataSet/
+*.csv
+*.json
 
 # uploaded runtime files
 uploads/
@@ -20,3 +22,5 @@ uploads/
 
 # OS junk
 .DS_Store
+
+phishing_model.pkl
