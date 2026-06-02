@@ -708,4 +708,13 @@ def change_password():
 # ─────────────────────────── ENTRY POINT ─────────────────────────────────────
 if __name__ == "__main__":
     logger.info("Starting PhishGuard AI server...")
-    app.run(host="0.0.0.0", port=5000, debug=os.getenv("FLASK_DEBUG", "false").lower() == "true")
+    
+    # 1. Dynamically get the port from Render (defaults to 5000 locally)
+    port = int(os.environ.get("PORT", 5000))
+    
+    # 2. Pass the dynamic port variable into app.run()
+    app.run(
+        host="0.0.0.0", 
+        port=port, 
+        debug=os.getenv("FLASK_DEBUG", "false").lower() == "true"
+    )

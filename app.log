@@ -1088,3 +1088,4 @@ FileNotFoundError: [Errno 2] No such file or directory: '/tmp\\ocr_f057c8a1a2344
 2026-06-02 20:53:53,004 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2026-06-02 20:54:09,495 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 2026-06-02 20:54:09,762 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 22:47:47,183 [INFO] Starting PhishGuard AI server...
