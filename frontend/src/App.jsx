@@ -16,6 +16,9 @@ import Profile from './pages/Profile';
 //import PhoneNumberChecker from './pages/PhoneScanner';
 import SmsScan from './pages/sms-detector'; // Ensure this matches the exported name in your file
 import PhoneScanner from './pages/PhoneScanner';
+import ForgotPassword from './components/auth/ForgotPassword';
+
+
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -35,6 +38,7 @@ export default function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
 
           <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
             <Route index element={<Dashboard />} />
@@ -45,6 +49,7 @@ export default function App() {
             <Route path="voice-scan" element={<VoiceScan />} />
             <Route path="phone-scan" element={<PhoneScanner/>} />
             <Route path="profile" element={<Profile />} />
+            
           </Route>
 
           <Route path="*" element={<Navigate to="/" replace />} />

@@ -2,106 +2,203 @@ import { useState, useRef } from 'react'
 import axios from 'axios'
 import {
   FileImage, Upload, CheckCircle2, AlertTriangle,
-  AlertCircle, Loader2, RotateCcw, X, Info, ChevronDown, ChevronUp
+  AlertCircle, Loader2, RotateCcw, X, Info,
+  ChevronDown, ChevronUp, ShieldCheck, ShieldAlert, Sparkles
 } from 'lucide-react'
 
-// ── Direct axios call with correct field name ──────────────────────────────
 const BASE_URL = 'http://localhost:5000'
 
 async function callOcrScan(file) {
   const formData = new FormData()
-  // ✅ field name MUST match request.files.get('image') in Flask
   formData.append('image', file, file.name)
-
   const token = localStorage.getItem('access_token')
   return axios.post(`${BASE_URL}/analyze-image`, formData, {
-    headers: {
-      // ✅ NEVER manually set Content-Type for FormData
-      // axios sets multipart/form-data + boundary automatically
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-    },
-    timeout: 60000,      // 60s — OCR + analysis takes time
+    headers: { ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+    timeout: 60000,
     withCredentials: true,
   })
 }
 
-// ── Result card ────────────────────────────────────────────────────────────
-function ResultSection({ result }) {
-  const [showLines, setShowLines] = useState(false)
+// ── Shared style maps ──────────────────────────────────────────────────────────
+const STATUS = {
+  SAFE:    { color: 'text-emerald-600', bg: 'bg-emerald-50', bar: 'bg-emerald-500', icon: CheckCircle2,  label: 'No threats found'        },
+  SCAM:    { color: 'text-red-600',     bg: 'bg-red-50',     bar: 'bg-red-500',     icon: AlertTriangle, label: 'Scam content detected'   },
+  WARNING: { color: 'text-amber-600',   bg: 'bg-amber-50',   bar: 'bg-amber-400',   icon: AlertCircle,   label: 'Suspicious content'      },
+}
 
-  const isScam = result.status === 'SCAM'
-  const isSafe = result.status === 'SAFE'
-  const score  = result.score || 0
+const VERDICT_STYLE = {
+  'CRITICAL':   { color: 'text-red-700',     bg: 'bg-red-100',    border: 'border-red-300',    dot: 'bg-red-500'     },
+  'HIGH RISK':  { color: 'text-red-600',     bg: 'bg-red-50',     border: 'border-red-200',    dot: 'bg-red-400'     },
+  'SUSPICIOUS': { color: 'text-amber-700',   bg: 'bg-amber-50',   border: 'border-amber-200',  dot: 'bg-amber-500'   },
+  'CAUTION':    { color: 'text-amber-600',   bg: 'bg-amber-50',   border: 'border-amber-200',  dot: 'bg-amber-400'   },
+  'LOW RISK':   { color: 'text-blue-600',    bg: 'bg-blue-50',    border: 'border-blue-200',   dot: 'bg-blue-400'    },
+  'SAFE':       { color: 'text-emerald-700', bg: 'bg-emerald-50', border: 'border-emerald-200',dot: 'bg-emerald-500' },
+}
 
-  const barColor = score >= 55 ? 'bg-red-500' : score >= 30 ? 'bg-amber-400' : 'bg-emerald-500'
+// ── Collapsible indicator row ──────────────────────────────────────────────────
+function IndicatorRow({ indicator, isScam }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div
+      className="border border-gray-100 rounded-xl overflow-hidden cursor-pointer select-none"
+      onClick={() => setOpen(o => !o)}
+    >
+      <div className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors">
+        <div className="flex items-center gap-2">
+          <span className={`w-2 h-2 rounded-full shrink-0 ${isScam ? 'bg-red-400' : 'bg-emerald-400'}`} />
+          <span className="text-xs font-bold uppercase tracking-wide text-gray-700">
+            {indicator.label}
+          </span>
+        </div>
+        {open ? <ChevronUp size={13} className="text-gray-400 shrink-0" />
+               : <ChevronDown size={13} className="text-gray-400 shrink-0" />}
+      </div>
+      {open && indicator.explanation && (
+        <div className="px-4 pb-3 pt-1 text-sm text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+          {indicator.explanation}
+        </div>
+      )}
+    </div>
+  )
+}
 
-  // ✅ backend returns extracted_text — support both keys for safety
+// ── Rich result card ───────────────────────────────────────────────────────────
+function ResultSection({ result, onReset }) {
+  const [showLines,  setShowLines]  = useState(false)
+  const [showLLM,    setShowLLM]    = useState(false)
+  const [loadingLLM, setLoadingLLM] = useState(false)
+  const [llmText,    setLlmText]    = useState(result?.llm_explanation || '')
+
+  const score        = parseFloat(result.score) || 0
+  const confidence   = parseFloat(result.confidence) || 0
+  const cfg          = STATUS[result.status] || STATUS.WARNING
+  const Icon         = cfg.icon
+  const isScam       = result.status === 'SCAM'
+
+  // XAI fields
+  const verdict        = result.verdict          || result.status || 'UNKNOWN'
+  const verdictStyle   = VERDICT_STYLE[verdict]  || VERDICT_STYLE['SAFE']
+  const summary        = result.summary          || ''
+  const recommendation = result.recommendation   || ''
+  const positiveSignals= Array.isArray(result.positive_signals) ? result.positive_signals : []
+
+  // Rich indicators, fallback to raw reasons
+  const indicators = Array.isArray(result.indicators) && result.indicators.length > 0
+    ? result.indicators
+    : (result.reasons || []).map(r => ({ label: r, explanation: '', raw: r }))
+
   const extractedText = result.extracted_text || result.text || ''
+  const flaggedLines  = (result.lines || []).filter(l => l.status === 'SCAM' || l.status === 'WARNING')
 
-  const allReasons = [
-    ...(result.reasons || []),
-    ...(result.lines || []).flatMap(l => l.reasons || []),
-  ]
-  const uniqueReasons = [...new Set(allReasons)].filter(Boolean)
-
-  const flaggedLines = (result.lines || []).filter(l => l.status === 'SCAM' || l.status === 'WARNING')
+  const handleExplainMore = async () => {
+    if (llmText) { setShowLLM(v => !v); return }
+    setLoadingLLM(true)
+    try {
+      const res  = await axios.post(`${BASE_URL}/explain`, {
+        url:        result.url || '[OCR scan]',
+        reasons:    result.reasons,
+        score:      result.score,
+        confidence: result.confidence,
+      })
+      const text = res.data.llm_explanation || res.data.explanation || ''
+      setLlmText(text)
+      setShowLLM(!!text)
+    } catch (err) {
+      console.error('LLM explain failed:', err)
+    } finally {
+      setLoadingLLM(false)
+    }
+  }
 
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-6 animate-fade-up space-y-5">
 
-      {/* Header */}
-      <div className="flex items-center gap-3">
-        <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0
-          ${isScam ? 'bg-red-50' : isSafe ? 'bg-emerald-50' : 'bg-amber-50'}`}>
-          {isScam
-            ? <AlertTriangle size={22} className="text-red-500" />
-            : isSafe
-            ? <CheckCircle2 size={22} className="text-emerald-500" />
-            : <AlertCircle size={22} className="text-amber-500" />
-          }
+      {/* ── Header ── */}
+      <div className="flex justify-between items-start">
+        <div className="flex gap-3 items-center">
+          <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${cfg.bg}`}>
+            <Icon size={22} className={cfg.color} />
+          </div>
+          <div>
+            <h3 className={`text-[16px] font-bold ${cfg.color}`}>{cfg.label}</h3>
+            {result.message && (
+              <p className="text-[12px] text-gray-400 mt-0.5">{result.message}</p>
+            )}
+          </div>
         </div>
-        <div>
-          <span className={`text-[12px] font-bold px-2.5 py-1 rounded-full
-            ${isScam ? 'bg-red-50 text-red-600' : isSafe ? 'bg-emerald-50 text-emerald-600' : 'bg-amber-50 text-amber-600'}`}>
-            {isScam ? 'Scam content detected' : isSafe ? 'No threats found' : 'Suspicious content'}
-          </span>
-          {result.message && (
-            <p className="text-[12px] text-gray-400 mt-1">{result.message}</p>
+        <div className="text-right shrink-0">
+          <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Risk Score</p>
+          <p className={`text-2xl font-black ${cfg.color}`}>{score}%</p>
+          {confidence > 0 && (
+            <p className="text-xs text-gray-400 mt-0.5">{confidence}% AI confidence</p>
           )}
         </div>
       </div>
 
-      {/* Score bar */}
-      <div>
-        <div className="flex justify-between text-[12px] mb-1.5">
-          <span className="text-gray-500 font-medium">Risk score</span>
-          <span className={`font-bold ${score >= 55 ? 'text-red-600' : score >= 30 ? 'text-amber-600' : 'text-emerald-600'}`}>
-            {score} / 100
-          </span>
-        </div>
-        <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-          <div className={`h-full rounded-full score-fill ${barColor}`} style={{ width: `${score}%` }} />
-        </div>
+      {/* ── Progress bar ── */}
+      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+        <div className={`h-full rounded-full transition-all duration-1000 ${cfg.bar}`}
+          style={{ width: `${score}%` }} />
       </div>
 
-      {/* Detection flags */}
-      {uniqueReasons.length > 0 && (
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-2">Detection flags</p>
-          <div className="flex flex-wrap gap-1.5">
-            {uniqueReasons.map((r, i) => (
-              <span key={i} className="px-2.5 py-1 bg-gray-100 text-gray-600 text-[11px] font-medium rounded-full">{r}</span>
-            ))}
+      {/* ── Verdict badge + summary ── */}
+      {(verdict || summary) && (
+        <div className={`rounded-xl px-4 py-3 border ${verdictStyle.bg} ${verdictStyle.border}`}>
+          <div className="flex items-center gap-2 mb-1">
+            <span className={`w-2 h-2 rounded-full ${verdictStyle.dot}`} />
+            <span className={`text-xs font-bold uppercase tracking-wider ${verdictStyle.color}`}>
+              {verdict}
+            </span>
           </div>
+          {summary && (
+            <p className={`text-sm ${verdictStyle.color} opacity-90`}>{summary}</p>
+          )}
         </div>
       )}
 
-      {/* Flagged lines */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* ── Detection flags ── */}
+        {indicators.length > 0 && (
+          <div className="space-y-2">
+            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Detection Flags</p>
+            <div className="space-y-1.5">
+              {indicators.map((ind, i) => (
+                <IndicatorRow key={i} indicator={ind} isScam={isScam} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── Positive signals ── */}
+        {positiveSignals.length > 0 && (
+          <div className="space-y-2">
+            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Legitimate Signals</p>
+            <div className="space-y-1.5">
+              {positiveSignals.map((sig, i) => (
+                <div key={i} className="flex items-center gap-2 text-sm text-emerald-700 px-1">
+                  <ShieldCheck size={13} className="shrink-0 text-emerald-500" />
+                  {sig}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* ── Recommendation ── */}
+      {recommendation && (
+        <div className="flex gap-3 bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
+          <ShieldAlert size={15} className="text-gray-400 shrink-0 mt-0.5" />
+          <p className="text-sm text-gray-600 leading-relaxed">{recommendation}</p>
+        </div>
+      )}
+
+      {/* ── Flagged lines (OCR specific) ── */}
       {flaggedLines.length > 0 && (
         <div>
           <button
             onClick={() => setShowLines(v => !v)}
-            className="flex items-center gap-1.5 text-[12px] font-semibold text-brand-600 hover:underline"
+            className="flex items-center gap-1.5 text-[12px] font-semibold text-indigo-600 hover:underline"
           >
             {showLines ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
             {flaggedLines.length} suspicious line{flaggedLines.length > 1 ? 's' : ''} found
@@ -121,12 +218,14 @@ function ResultSection({ result }) {
         </div>
       )}
 
-      {/* Extracted text */}
+      {/* ── Extracted text (OCR specific) ── */}
       {extractedText ? (
         <div className="border-t border-gray-100 pt-4">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-2">Extracted text</p>
+          <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-2">Extracted Text</p>
           <div className="bg-gray-50 rounded-xl p-4 max-h-48 overflow-y-auto">
-            <p className="text-[12px] text-gray-700 font-mono whitespace-pre-wrap leading-relaxed">{extractedText}</p>
+            <p className="text-[12px] text-gray-700 font-mono whitespace-pre-wrap leading-relaxed">
+              {extractedText}
+            </p>
           </div>
         </div>
       ) : (
@@ -134,11 +233,46 @@ function ResultSection({ result }) {
           No text could be extracted from this image.
         </div>
       )}
+
+      {/* ── Action row ── */}
+      <div className="flex items-center justify-between flex-wrap gap-3 pt-1">
+        <button
+          onClick={handleExplainMore}
+          disabled={loadingLLM}
+          className="flex items-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700
+                     disabled:opacity-60 text-white rounded-xl text-sm font-semibold transition-colors shadow-sm"
+        >
+          {loadingLLM
+            ? <><Loader2 size={14} className="animate-spin" /> AI is thinking...</>
+            : <><Sparkles size={14} /> {showLLM ? 'Hide AI Report' : 'View AI Forensic Report'}</>
+          }
+        </button>
+        <button
+          onClick={onReset}
+          className="flex items-center gap-1.5 px-4 py-2.5 text-[13px] font-semibold
+                     text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-xl transition"
+        >
+          <RotateCcw size={13} /> Scan another
+        </button>
+      </div>
+
+      {/* ── LLM explanation panel ── */}
+      {showLLM && llmText && (
+        <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-4 space-y-2">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+              <Sparkles size={12} className="text-indigo-600" />
+            </div>
+            <h4 className="text-sm font-bold text-indigo-800">AI Forensic Analysis</h4>
+          </div>
+          <p className="text-sm text-indigo-900 leading-relaxed whitespace-pre-wrap">{llmText}</p>
+        </div>
+      )}
     </div>
   )
 }
 
-// ── Main component ─────────────────────────────────────────────────────────
+// ── Main page ──────────────────────────────────────────────────────────────────
 export default function OcrScan() {
   const [file,    setFile]    = useState(null)
   const [preview, setPreview] = useState(null)
@@ -152,21 +286,12 @@ export default function OcrScan() {
     if (!f) return
     const allowed = ['image/jpeg', 'image/png', 'image/webp']
     if (!allowed.includes(f.type)) { setError('Please use JPG, PNG, or WEBP.'); return }
-    if (f.size > 5 * 1024 * 1024) { setError('File too large (max 5MB).'); return }
-    setFile(f)
-    setPreview(URL.createObjectURL(f))
-    setError('')
-    setResult(null)
+    if (f.size > 5 * 1024 * 1024)  { setError('File too large (max 5MB).'); return }
+    setFile(f); setPreview(URL.createObjectURL(f)); setError(''); setResult(null)
   }
 
-  const onDrop = (e) => {
-    e.preventDefault(); setDrag(false)
-    handleFile(e.dataTransfer.files?.[0])
-  }
-
-  const onReset = () => {
-    setFile(null); setPreview(null); setResult(null); setError('')
-  }
+  const onDrop  = (e) => { e.preventDefault(); setDrag(false); handleFile(e.dataTransfer.files?.[0]) }
+  const onReset = ()  => { setFile(null); setPreview(null); setResult(null); setError('') }
 
   const handleScan = async () => {
     if (!file) { setError('Upload an image first.'); return }
@@ -175,11 +300,8 @@ export default function OcrScan() {
       const r = await callOcrScan(file)
       setResult(r.data)
     } catch (e) {
-      const msg = e.response?.data?.error || e.message || 'Scan failed. Please try again.'
-      setError(msg)
-    } finally {
-      setLoading(false)
-    }
+      setError(e.response?.data?.error || e.message || 'Scan failed. Please try again.')
+    } finally { setLoading(false) }
   }
 
   return (
@@ -211,16 +333,13 @@ export default function OcrScan() {
           onDrop={onDrop}
           onClick={() => !file && inputRef.current.click()}
           className={`relative border-2 border-dashed rounded-xl transition-all
-            ${file ? 'border-emerald-300 bg-emerald-50 cursor-default'
-              : drag ? 'border-brand-600 bg-brand-50 cursor-copy'
-              : 'border-gray-200 hover:border-brand-400 hover:bg-brand-50/30 cursor-pointer'}`}
+            ${file    ? 'border-emerald-300 bg-emerald-50 cursor-default'
+            : drag    ? 'border-brand-600 bg-brand-50 cursor-copy'
+            : 'border-gray-200 hover:border-brand-400 hover:bg-brand-50/30 cursor-pointer'}`}
         >
-          <input
-            ref={inputRef} type="file"
-            accept="image/jpeg,image/png,image/webp"
-            onChange={e => handleFile(e.target.files?.[0])}
-            className="hidden"
-          />
+          <input ref={inputRef} type="file" accept="image/jpeg,image/png,image/webp"
+            onChange={e => handleFile(e.target.files?.[0])} className="hidden" />
+
           {file ? (
             <div className="p-5">
               {preview && (
@@ -233,10 +352,8 @@ export default function OcrScan() {
                   {file.name}
                   <span className="text-gray-400 font-normal">({(file.size / 1024).toFixed(0)} KB)</span>
                 </div>
-                <button
-                  onClick={e => { e.stopPropagation(); onReset() }}
-                  className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition"
-                >
+                <button onClick={e => { e.stopPropagation(); onReset() }}
+                  className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition">
                   <X size={14} />
                 </button>
               </div>
@@ -255,7 +372,7 @@ export default function OcrScan() {
         </div>
 
         {error && (
-          <div className="flex items-center gap-2 p-3.5 bg-red-50 border border-red-100 rounded-xl text-red-600 text-[13px] animate-shake">
+          <div className="flex items-center gap-2 p-3.5 bg-red-50 border border-red-100 rounded-xl text-red-600 text-[13px]">
             <AlertTriangle size={14} className="flex-shrink-0" /> {error}
           </div>
         )}
@@ -267,11 +384,8 @@ export default function OcrScan() {
               <RotateCcw size={13} /> Reset
             </button>
           )}
-          <button
-            onClick={handleScan}
-            disabled={loading || !file}
-            className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-brand-600 hover:bg-brand-700 disabled:bg-gray-200 disabled:cursor-not-allowed text-white text-[14px] font-semibold rounded-xl transition shadow-brand"
-          >
+          <button onClick={handleScan} disabled={loading || !file}
+            className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-brand-600 hover:bg-brand-700 disabled:bg-gray-200 disabled:cursor-not-allowed text-white text-[14px] font-semibold rounded-xl transition shadow-brand">
             {loading
               ? <><Loader2 size={16} className="animate-spin" /> Analysing image…</>
               : <><FileImage size={15} /> Scan image</>
@@ -288,7 +402,7 @@ export default function OcrScan() {
         </div>
       )}
 
-      {result && !loading && <ResultSection result={result} />}
+      {result && !loading && <ResultSection result={result} onReset={onReset} />}
     </div>
   )
 }
