@@ -22,5 +22,4 @@ uploads/
 
 # OS junk
 .DS_Store
-
-phishing_model.pkl
+*.pkl

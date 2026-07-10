@@ -19,23 +19,30 @@ feature_columns = None
 
 
 # ✅ STEP 1: Download model if not present
+import requests
+
 def download_model():
     if not os.path.exists(MODEL_PATH):
-        print("📥 Model not found. Downloading from Google Drive...")
+        print("⬇️ Downloading model...")
 
-        os.makedirs(BASE_DIR, exist_ok=True)
+        URL = MODEL_URL
+        session = requests.Session()
 
-        try:
-            response = requests.get(MODEL_URL, stream=True)
-            with open(MODEL_PATH, "wb") as f:
-                for chunk in response.iter_content(chunk_size=8192):
-                    if chunk:
-                        f.write(chunk)
+        response = session.get(URL, stream=True)
 
-            print("✅ Model downloaded successfully!")
+        # Handle Google Drive warning
+        for key, value in response.cookies.items():
+            if key.startswith('download_warning'):
+                params = {'id': URL.split("id=")[-1], 'confirm': value}
+                response = session.get("https://drive.google.com/uc", params=params, stream=True)
+                break
 
-        except Exception as e:
-            print("❌ Error downloading model:", e)
+        with open(MODEL_PATH, "wb") as f:
+            for chunk in response.iter_content(1024 * 1024):
+                if chunk:
+                    f.write(chunk)
+
+        print("✅ Model downloaded!")
 
 
 # ✅ STEP 2: Load models (lazy loading)
