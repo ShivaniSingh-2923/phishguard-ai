@@ -1,0 +1,26 @@
+# env files (VERY IMPORTANT)
+.env
+.env.*
+
+# dependencies
+node_modules/
+
+# python cache
+__pycache__/
+*.pyc
+
+# Ignore heavy training datasets
+dataSet/
+*.csv
+*.json
+
+# uploaded runtime files
+uploads/
+
+# logs
+*.log
+
+# OS junk
+.DS_Store
+
+phishing_model.pkl

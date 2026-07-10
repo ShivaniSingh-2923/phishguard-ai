@@ -1,0 +1,1291 @@
+2026-03-25 22:51:03,841 [INFO] Starting PhishGuard AI server...
+2026-03-25 22:51:27,399 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-25 22:52:28,810 [INFO] URL scan requested: http://verify-bank-account-update.tk
+2026-03-25 22:52:44,437 [INFO] Scan result: SCAM (score=100) for http://verify-bank-account-update.tk
+2026-03-25 22:54:13,153 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-25 23:09:31,252 [INFO] Starting PhishGuard AI server...
+2026-03-25 23:09:56,619 [INFO] URL scan requested: https://www.google.com/
+2026-03-25 23:10:04,631 [INFO] Scan result: SAFE (score=0) for https://www.google.com/
+2026-03-25 23:10:21,709 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-25 23:10:26,140 [INFO] URL scan requested: https://login.microsoft.com-security-update.xyz
+2026-03-25 23:10:32,553 [INFO] Scan result: SCAM (score=100) for https://login.microsoft.com-security-update.xyz
+2026-03-25 23:24:16,718 [INFO] Starting PhishGuard AI server...
+2026-03-26 00:16:56,502 [INFO] Starting PhishGuard AI server...
+2026-03-26 00:17:48,609 [INFO] URL scan requested: https://www.google.com/
+2026-03-26 00:17:50,622 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_dots
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+Feature names seen at fit time, yet now missing:
+- dots
+
+2026-03-26 00:17:55,018 [INFO] Scan result: SAFE (score=0) for https://www.google.com/
+2026-03-26 21:54:08,926 [INFO] Starting PhishGuard AI server...
+2026-03-26 22:11:14,656 [INFO] Starting PhishGuard AI server...
+2026-03-26 22:11:48,100 [ERROR] Unhandled Exception: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-03-26 22:11:48,240 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:13:10,847 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:13:51,988 [ERROR] Unhandled Exception: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-03-26 22:13:52,062 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:24:35,097 [INFO] Starting PhishGuard AI server...
+2026-03-26 22:25:46,393 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:25:49,851 [INFO] URL scan requested: https://login.microsoft.com-security-update.xyz
+2026-03-26 22:25:53,508 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_dots
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+Feature names seen at fit time, yet now missing:
+- dots
+
+2026-03-26 22:33:48,427 [INFO] URL scan requested: http://www.824555.com/app/member/SportOption.php?uid=guest&langx=gb
+2026-03-26 22:33:51,761 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_dots
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+Feature names seen at fit time, yet now missing:
+- dots
+
+2026-03-26 22:40:58,739 [INFO] Starting PhishGuard AI server...
+2026-03-26 22:41:40,471 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:41:42,942 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:41:48,952 [INFO] URL scan requested: https://www.google.com/
+2026-03-26 22:41:51,951 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_dots
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+Feature names seen at fit time, yet now missing:
+- dots
+
+2026-03-26 22:51:20,715 [INFO] Starting PhishGuard AI server...
+2026-03-26 22:52:12,796 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:52:12,832 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:52:16,813 [INFO] URL scan requested: https://www.google.com/
+2026-03-26 22:52:19,436 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_dots
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+Feature names seen at fit time, yet now missing:
+- dots
+
+2026-03-26 22:52:24,052 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:52:34,148 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:52:34,162 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:52:38,459 [INFO] URL scan requested: https://login.microsoft.com-security-update.xyz
+2026-03-26 22:52:40,462 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_dots
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+Feature names seen at fit time, yet now missing:
+- dots
+
+2026-03-26 22:52:44,647 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:55:55,190 [INFO] Starting PhishGuard AI server...
+2026-03-26 22:56:14,951 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 22:56:18,542 [INFO] URL scan requested: https://login.microsoft.com-security-update.xyz
+2026-03-26 22:56:20,017 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_dots
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+Feature names seen at fit time, yet now missing:
+- dots
+
+2026-03-26 22:56:51,991 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 23:16:46,820 [INFO] Starting PhishGuard AI server...
+2026-03-26 23:17:10,323 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 23:17:16,567 [INFO] URL scan requested: http://verify-bank-account-update.tk
+2026-03-26 23:17:27,958 [ERROR] Critical error in analyze_url: 'num_dots'
+2026-03-26 23:24:41,130 [INFO] Starting PhishGuard AI server...
+2026-03-26 23:26:52,940 [INFO] URL scan requested: https://www.youtube.com/
+2026-03-26 23:26:55,136 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+
+2026-03-26 23:33:53,320 [INFO] URL scan requested: https://web.whatsapp.com/
+2026-03-26 23:33:56,977 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+
+2026-03-26 23:35:59,708 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:36:04,692 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:36:09,688 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:36:24,698 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:37:24,690 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:38:24,689 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:39:24,699 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:40:24,686 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:41:24,701 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:42:24,704 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:43:24,701 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:44:24,703 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:45:24,725 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:46:24,706 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:47:24,702 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:48:24,706 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:49:24,707 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:20,856 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:24,612 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:28,166 [INFO] URL scan requested: http://www.824555.com/app/member/SportOption.php?uid=guest&langx=gb
+2026-03-26 23:50:29,607 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:30,782 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+
+2026-03-26 23:50:34,624 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:39,614 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:44,609 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:49,620 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:54,696 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:50:59,703 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:04,692 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:09,710 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:14,750 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:19,712 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:24,702 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:29,607 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:34,610 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:39,611 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:43,412 [INFO] URL scan requested: https://www.google.com/
+2026-03-26 23:51:44,610 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:45,387 [WARNING] ML error: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- digit_ratio
+- num_special_chars
+- subdomain_depth
+- suspicious_words_count
+
+2026-03-26 23:51:49,606 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:54,695 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:51:59,696 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:04,697 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:09,704 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:14,688 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:19,701 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:24,689 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:29,696 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:34,696 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:39,700 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:44,686 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:49,701 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:54,693 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:52:59,698 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:53:04,688 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:53:24,692 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-26 23:54:28,731 [INFO] Starting PhishGuard AI server...
+2026-03-26 23:55:43,894 [INFO] Starting PhishGuard AI server...
+2026-03-26 23:56:07,926 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-26 23:56:11,650 [INFO] URL scan requested: https://www.google.com/
+2026-03-27 00:43:58,150 [INFO] Starting PhishGuard AI server...
+2026-03-27 00:44:13,720 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-27 00:44:25,066 [INFO] URL scan requested: http://www.824555.com/app/member/SportOption.php?uid=guest&langx=gb
+2026-03-27 00:44:43,591 [ERROR] Unhandled Exception: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2026-03-27 00:44:43,673 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-27 00:47:20,095 [INFO] Starting PhishGuard AI server...
+2026-03-27 00:57:27,000 [INFO] Starting PhishGuard AI server...
+2026-03-27 00:57:48,372 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-27 00:57:54,300 [INFO] URL scan requested: http://www.824555.com/app/member/SportOption.php?uid=guest&langx=gb
+2026-03-27 14:33:10,837 [INFO] Starting PhishGuard AI server...
+2026-03-27 14:40:55,242 [INFO] Starting PhishGuard AI server...
+2026-03-27 14:41:16,628 [ERROR] History fetch error: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+2026-03-27 14:41:24,054 [INFO] URL scan requested: http://verify-bank-account-update.tk
+2026-03-27 14:41:39,608 [ERROR] Unhandled Exception: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+2026-03-27 14:59:36,096 [INFO] Starting PhishGuard AI server...
+2026-03-27 15:05:42,540 [INFO] Starting PhishGuard AI server...
+2026-03-27 15:07:12,487 [INFO] Starting PhishGuard AI server...
+2026-03-27 15:10:37,676 [INFO] Starting PhishGuard AI server...
+2026-03-27 15:18:50,352 [ERROR] History fetch error: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+2026-03-27 15:18:53,031 [INFO] URL scan requested: http://www.824555.com/app/member/SportOption.php?uid=guest&langx=gb
+2026-03-27 15:18:56,610 [ERROR] Unhandled Exception: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+2026-03-28 21:01:54,572 [INFO] Starting PhishGuard AI server...
+2026-03-28 21:02:15,909 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-28 21:02:16,299 [ERROR] History fetch error: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+2026-03-28 21:02:19,928 [INFO] URL scan requested: https://login.microsoft.com-security-update.xyz
+2026-03-28 21:02:26,288 [ERROR] Unhandled Exception: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+2026-03-28 21:10:42,592 [INFO] Starting PhishGuard AI server...
+2026-03-28 21:28:25,544 [INFO] Starting PhishGuard AI server...
+2026-03-28 21:45:55,610 [INFO] Starting PhishGuard AI server...
+2026-03-28 21:59:48,690 [INFO] Starting PhishGuard AI server...
+2026-03-28 22:22:14,676 [INFO] Starting PhishGuard AI server...
+2026-03-28 22:22:28,942 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-28 22:22:32,677 [INFO] URL scan requested: http://www.824555.com/app/member/SportOption.php?uid=guest&langx=gb
+2026-03-28 22:32:21,481 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-28 22:33:21,987 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:33:26,626 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:33:31,633 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:33:36,637 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:33:50,637 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:34:50,627 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:35:50,643 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:36:50,631 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:37:50,630 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:38:50,634 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:39:50,638 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:40:50,641 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:41:51,110 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:42:50,625 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-28 22:43:50,638 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:09:24,950 [INFO] Starting PhishGuard AI server...
+2026-03-29 22:09:36,546 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-29 22:09:40,356 [INFO] URL scan requested: http://verify-bank-account-update.tk
+2026-03-29 22:12:56,714 [INFO] New user registered: test@example.com
+2026-03-29 22:14:20,955 [INFO] User logged in: test@example.com
+2026-03-29 22:52:49,542 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:53:49,535 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:54:49,527 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:55:49,526 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:56:49,557 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:57:49,532 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:58:49,526 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:58:58,075 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:59:01,482 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:59:13,899 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:59:16,012 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:59:37,451 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 22:59:40,996 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-03-29 23:11:10,901 [WARNING] Failed login attempt for: shivanichauhan2923@gmail.com
+2026-03-29 23:17:23,996 [INFO] URL scan requested: http://verify-bank-account-update.tk
+2026-03-29 23:19:22,278 [INFO] Scam reported: http://verify-bank-account-update.tk
+2026-03-30 12:47:17,668 [INFO] Starting PhishGuard AI server...
+2026-03-30 12:47:36,184 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:50:14,204 [INFO] New user registered: shivanichauhan2923@gmail.com
+2026-03-30 13:50:14,550 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:50:14,580 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:50:53,345 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:50:53,369 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:51:04,871 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:51:04,921 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:51:20,816 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-03-30 13:51:20,836 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 18:22:40,745 [INFO] Starting PhishGuard AI server...
+2026-04-01 18:23:48,907 [INFO] User logged in: shivanichauhan2923@gmail.com
+2026-04-01 18:23:49,267 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 18:23:49,344 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 18:24:50,992 [INFO] Phone check: 908856****
+2026-04-01 18:24:59,369 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 18:24:59,393 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 18:25:22,305 [INFO] URL scan requested: https://google.com
+2026-04-01 18:25:38,491 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 18:25:38,524 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 20:19:30,485 [INFO] Starting PhishGuard AI server...
+2026-04-01 21:39:00,212 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:39:00,911 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:42:41,574 [INFO] User logged in: shivanichauhan2923@gmail.com
+2026-04-01 21:52:32,984 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:52:33,047 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:52:40,677 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:52:41,002 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:08,289 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:08,618 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:16,600 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:19,634 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:20,390 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:20,594 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:21,496 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:22,120 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:22,321 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:22,641 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:22,812 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:23,015 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:23,127 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:23,300 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:23,573 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:23,727 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:23,902 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:24,140 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:24,230 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:24,433 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:24,541 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:24,818 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:25,084 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:25,144 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:25,413 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:25,529 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:25,571 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:26,117 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:26,119 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:26,273 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:26,276 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:26,430 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:26,431 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:26,618 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:26,618 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:26,757 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:26,759 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:26,913 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:26,943 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:27,100 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:27,103 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:27,196 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:27,242 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:27,337 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:27,427 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:27,569 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:27,570 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:29,287 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:29,318 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:29,347 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:29,535 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:29,665 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:29,689 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:29,836 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:29,842 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,000 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:30,004 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,145 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:30,182 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,312 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:30,332 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,485 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:30,486 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,614 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:30,630 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,769 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:30,807 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,972 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:30,980 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:31,123 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:31,127 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:31,280 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:31,296 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:31,459 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:31,464 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:31,628 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:31,634 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:31,764 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:31,787 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:31,933 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:31,951 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:32,126 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:32,128 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:32,315 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:32,316 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:32,483 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:32,488 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:32,636 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:32,668 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:32,846 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:32,849 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:33,049 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:33,052 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:33,203 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:33,203 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:33,401 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:33,403 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:33,604 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:33,604 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:33,834 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:33,838 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:33,968 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:33,970 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:34,136 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:34,152 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:34,343 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:34,343 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:34,518 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:34,520 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:34,700 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:34,700 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:34,875 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:34,881 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:35,587 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:35,852 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:35,918 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:36,178 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:36,244 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:36,510 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:36,570 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:36,849 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:36,900 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:37,181 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:37,232 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:37,515 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:37,556 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:37,851 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:37,885 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:38,176 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:38,212 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:38,493 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:38,548 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:38,819 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:38,867 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:39,133 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:39,182 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:39,444 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:39,507 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:39,757 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:39,833 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:40,070 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:58,421 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:58,423 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:58,425 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:53:58,551 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:58,558 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:53:58,743 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:14,707 [INFO] Starting PhishGuard AI server...
+2026-04-01 21:56:26,962 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:27,418 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:28,902 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:29,195 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:30,773 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:30,797 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:45,776 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:46,100 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:46,363 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:46,997 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:47,303 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:47,618 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:48,168 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:48,367 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:49,251 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:49,856 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:50,305 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:50,632 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:50,898 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:51,201 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:51,401 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:51,579 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:51,846 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:52,129 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:52,417 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:52,773 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:53,051 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:53,336 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:53,611 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:53,936 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:53,999 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:54,278 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:54,561 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:54,836 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:55,268 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:55,556 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:55,792 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:56,268 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:56,523 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:56,722 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:56,907 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:57,370 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:56:57,373 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 21:56:57,462 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-01 21:56:57,498 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-01 23:46:42,185 [INFO] Starting PhishGuard AI server...
+2026-04-01 23:47:18,958 [INFO] User logged in: shivanichauhan2923@gmail.com
+2026-04-01 23:47:35,177 [WARNING] Failed login attempt for: mukeshbsnl84@gmail.com
+2026-04-01 23:47:57,868 [INFO] New user registered: mukeshbsnl84@gmail.com
+2026-04-01 23:49:32,818 [INFO] User logged in: shivanichauhan2923@gmail.com
+2026-04-01 23:51:55,585 [INFO] New user registered: rubina@gmail.com
+2026-04-02 00:06:44,451 [INFO] Starting PhishGuard AI server...
+2026-04-02 00:23:51,484 [INFO] New user registered: john@gmail.com
+2026-04-02 00:36:34,410 [INFO] New user registered: shivanichauhan2923@gmail.com
+2026-04-02 00:40:27,803 [INFO] User logged in: shivanichauhan2923@gmail.com
+2026-04-02 00:44:08,544 [INFO] User logged in: shivanichauhan2923@gmail.com
+2026-04-02 00:51:06,677 [INFO] New user registered: testuser@gmail.com
+2026-04-02 00:51:30,200 [INFO] User logged in: testuser@gmail.com
+2026-04-02 15:07:35,520 [INFO] Starting PhishGuard AI server...
+2026-04-02 15:19:46,315 [INFO] Starting PhishGuard AI server...
+2026-04-02 15:20:38,048 [INFO] New user registered: dummy@gmail.com
+2026-04-02 15:35:32,435 [INFO] New user registered: dummy2@gmail.com
+2026-04-02 15:37:11,681 [INFO] User logged in: dummy@gmail.com
+2026-04-02 15:38:01,209 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-02 15:38:04,425 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 15:18:09,316 [INFO] Starting PhishGuard AI server...
+2026-04-03 15:20:43,528 [INFO] Starting PhishGuard AI server...
+2026-04-03 15:21:30,966 [WARNING] Failed login attempt for: shivanichauhan2923@gmail.com
+2026-04-03 15:21:54,603 [INFO] User logged in: dummy@gmail.com
+2026-04-03 15:23:44,697 [INFO] URL scan requested: https://googlw.com
+2026-04-03 15:24:16,980 [INFO] URL scan requested: https://abcs.com
+2026-04-03 15:24:34,417 [INFO] URL scan requested: https://http:test.com
+2026-04-03 15:25:19,965 [INFO] URL scan requested: https://goo0gle/com
+2026-04-03 16:04:16,786 [INFO] URL scan requested: https://bomb-girega-tumhare-fhr-mai-aaj
+2026-04-03 16:09:22,588 [INFO] URL scan requested: https://knxlkn
+2026-04-03 16:24:51,329 [INFO] User logged in: dummy@gmail.com
+2026-04-03 16:36:31,753 [INFO] SMS scan: 'kshdjkS...'
+2026-04-03 16:36:31,865 [INFO] SMS result: SAFE (score=0)
+2026-04-03 16:37:31,444 [INFO] SMS scan: 'vj...'
+2026-04-03 16:37:31,544 [INFO] SMS result: SAFE (score=0)
+2026-04-03 16:37:45,017 [INFO] SMS scan: 'djhj,jhlk.ml.jlk...'
+2026-04-03 16:37:45,113 [INFO] SMS result: SAFE (score=0)
+2026-04-03 16:38:02,886 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 16:50:37,636 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:50:37,959 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:50:48,362 [INFO] User logged in: dummy@gmail.com
+2026-04-03 16:50:49,042 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:50:49,293 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:14,616 [INFO] URL scan requested: https://google.conm
+2026-04-03 16:51:28,512 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:28,525 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:29,437 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:29,744 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:29,749 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:29,753 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:43,913 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:43,914 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:43,925 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:51:43,926 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:54:23,222 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:54:23,223 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:54:23,224 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 16:54:23,232 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:03:52,215 [INFO] User logged in: dummy@gmail.com
+2026-04-03 17:03:52,328 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:03:52,637 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:03:52,647 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:03:52,650 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:04:16,563 [INFO] URL scan requested: https://google.com/
+2026-04-03 17:05:13,729 [INFO] URL scan requested: https://micrs0ft.com
+2026-04-03 17:05:36,171 [INFO] URL scan requested: https://micrs0ft.com
+2026-04-03 17:05:55,351 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 17:06:13,949 [INFO] Loading VoiceDetector model...
+2026-04-03 17:06:13,950 [INFO] VoiceDetector model loaded.
+2026-04-03 17:07:08,190 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:07:08,196 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:07:08,197 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:07:08,204 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:07:30,950 [INFO] URL scan requested: https://http.html.com
+2026-04-03 17:07:40,105 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:07:40,106 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:07:40,110 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:07:40,115 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:41,251 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:41,255 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:41,256 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:41,256 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:56,902 [INFO] User logged in: dummy@gmail.com
+2026-04-03 17:19:56,980 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:57,285 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:57,289 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:19:57,290 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:20:24,049 [INFO] URL scan requested: https://google.com
+2026-04-03 17:20:45,413 [INFO] URL scan requested: https://goodle/.com
+2026-04-03 17:20:58,426 [INFO] URL scan requested: https://http:test.com
+2026-04-03 17:21:06,959 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:06,962 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:06,963 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:06,979 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:19,700 [INFO] SMS scan: 'kjasxABSX,as...'
+2026-04-03 17:21:19,792 [INFO] SMS result: SAFE (score=0)
+2026-04-03 17:21:34,182 [INFO] SMS scan: 'wkjdgjkABCJMgsdFU...'
+2026-04-03 17:21:34,268 [INFO] SMS result: SAFE (score=0)
+2026-04-03 17:21:37,460 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:37,463 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:37,466 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:37,471 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:53,745 [INFO] URL scan requested: https://FEDBWEMGFCNW
+2026-04-03 17:21:57,059 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:57,063 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:57,063 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 17:21:57,064 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:30:13,445 [INFO] Starting PhishGuard AI server...
+2026-04-03 19:31:08,834 [WARNING] Failed login attempt for: dummy@gmail.com
+2026-04-03 19:31:25,711 [INFO] User logged in: dummy@gmail.com
+2026-04-03 19:42:42,128 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:45:17,644 [INFO] User logged in: dummy@gmail.com
+2026-04-03 19:49:22,331 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:49:22,334 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:49:22,335 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:49:22,335 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:50:29,805 [INFO] User logged in: dummy@gmail.com
+2026-04-03 19:52:03,787 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:52:03,802 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:54:30,658 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:54:30,660 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:54:30,666 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:54:30,670 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:01,139 [INFO] User logged in: dummy@gmail.com
+2026-04-03 19:55:01,207 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:01,532 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:01,544 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:01,865 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:04,280 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:04,591 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:04,594 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:04,600 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,197 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,208 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,522 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,524 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,757 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,757 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,772 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,788 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,857 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:05,990 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:06,115 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:06,181 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:12,212 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:12,213 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:28,019 [INFO] URL scan requested: https://google.com
+2026-04-03 19:55:41,143 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:41,145 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:45,688 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:45,692 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:45,693 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:55:45,693 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:56:19,596 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:56:19,605 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:56:19,608 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 19:56:19,614 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:53,150 [INFO] User logged in: dummy@gmail.com
+2026-04-03 20:02:53,228 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:53,548 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:53,549 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:53,554 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:59,865 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:59,866 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:59,878 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:02:59,878 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:32,841 [INFO] User logged in: dummy@gmail.com
+2026-04-03 20:03:32,903 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:33,208 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:33,209 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:33,212 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:37,013 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:37,016 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:37,019 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:37,024 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:46,243 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:46,246 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:46,247 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:03:46,247 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:24,283 [INFO] User logged in: dummy@gmail.com
+2026-04-03 20:09:24,351 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:24,653 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:24,654 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:24,657 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:36,398 [INFO] Phone check: 123475****
+2026-04-03 20:09:42,402 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:42,403 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:42,415 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:09:42,417 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:19,326 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:19,328 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:19,330 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:19,348 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:41,213 [INFO] User logged in: dummy@gmail.com
+2026-04-03 20:10:41,310 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:41,622 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:41,624 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:41,628 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:58,786 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:10:58,787 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:11:05,845 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:11:05,848 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:11:05,854 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:11:05,856 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:12:12,814 [INFO] URL scan requested: https://google.com
+2026-04-03 20:12:44,803 [INFO] SMS scan: 'scjsvchsqdcmqnsvkjamn...'
+2026-04-03 20:12:44,910 [INFO] SMS result: SAFE (score=0)
+2026-04-03 20:13:03,912 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:13:03,914 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:13:03,919 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:13:03,924 [ERROR] Unhandled Exception: 429 Too Many Requests: 60 per 1 hour
+2026-04-03 20:30:39,038 [INFO] Starting PhishGuard AI server...
+2026-04-03 20:53:52,565 [INFO] Starting PhishGuard AI server...
+2026-04-03 20:54:45,490 [INFO] User logged in: dummy@gmail.com
+2026-04-03 20:55:59,365 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 20:56:05,252 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:02:58,942 [INFO] Starting PhishGuard AI server...
+2026-04-03 21:03:21,658 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:06:12,535 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:10:20,935 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:10:26,979 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:11:40,959 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:15:42,153 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:15:46,094 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:16:11,706 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:16:11,708 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:16:11,722 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:16:11,775 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:17:59,135 [INFO] User logged in: dummy@gmail.com
+2026-04-03 21:18:13,314 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:20:38,105 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:20:39,297 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:20:40,326 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:21:01,271 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:21:02,458 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:21:47,421 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:23:37,892 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:23:40,003 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:23:40,678 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:24:07,742 [INFO] User logged in: dummy@gmail.com
+2026-04-03 21:26:02,338 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:29:30,100 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:29:36,567 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:29:37,323 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:29:37,963 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:35:31,082 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:41:29,368 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:41:30,363 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 21:47:51,765 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 22:31:10,277 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 22:31:29,803 [INFO] User logged in: dummy@gmail.com
+2026-04-03 22:31:46,121 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 22:31:47,621 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 22:48:47,931 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-03 23:05:59,283 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-04 14:06:28,336 [INFO] Starting PhishGuard AI server...
+2026-04-04 14:08:22,674 [INFO] User logged in: dummy@gmail.com
+2026-04-04 14:33:55,720 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-04 14:36:31,924 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-04 14:36:31,989 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-04 14:39:29,532 [INFO] Starting PhishGuard AI server...
+2026-04-04 14:39:45,367 [INFO] User logged in: dummy@gmail.com
+2026-04-04 14:39:56,227 [ERROR] OCR route error: [Errno 2] No such file or directory: '/tmp\\ocr_f057c8a1a2344c9db50fc6daa7e85580.jpeg'
+Traceback (most recent call last):
+  File "c:\Users\USER\Desktop\phisGuard\app.py", line 487, in analyze_image_route
+    file.save(temp_path)
+    ~~~~~~~~~^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 129, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp\\ocr_f057c8a1a2344c9db50fc6daa7e85580.jpeg'
+2026-04-04 14:43:37,439 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-04 14:55:38,454 [INFO] Starting PhishGuard AI server...
+2026-04-04 14:58:02,408 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_aa8cb3b8d7e1464fb496bb8c1c204440.jpeg
+2026-04-04 14:58:05,766 [INFO] OCR complete: SAFE score=0
+2026-04-04 14:58:16,759 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_b0ba6e3e77614ada9b165a47815bbfd0.jpeg
+2026-04-04 14:58:20,077 [INFO] OCR complete: SAFE score=0
+2026-04-04 14:59:08,814 [INFO] Loading VoiceDetector model...
+2026-04-04 14:59:08,815 [INFO] VoiceDetector model loaded.
+2026-04-04 14:59:32,145 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-04 15:00:14,829 [INFO] User logged in: dummy@gmail.com
+2026-04-04 15:00:32,650 [INFO] URL scan requested: https://google.com
+2026-04-04 15:00:54,486 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_ca34abc786da4346b5de0d006f3a17fb.jpeg
+2026-04-04 15:00:59,306 [INFO] OCR complete: SAFE score=0
+2026-04-04 15:01:22,764 [INFO] Phone check: 770198****
+2026-04-04 15:01:28,383 [ERROR] Unhandled Exception: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2026-04-04 15:02:07,745 [ERROR] History fetch error: ac-g2opwcm-shard-00-01.3nnbzvu.mongodb.net:27017: [Errno 11001] getaddrinfo failed (configured timeouts: connectTimeoutMS: 20000.0ms)
+2026-04-05 15:25:58,624 [INFO] Starting PhishGuard AI server...
+2026-04-05 16:08:05,035 [INFO] Starting PhishGuard AI server...
+2026-04-05 16:26:21,137 [INFO] Starting PhishGuard AI server...
+2026-04-05 16:27:17,678 [INFO] User logged in: dummy@gmail.com
+2026-04-05 16:29:42,069 [INFO] URL scan requested: https://google.com
+2026-04-05 16:30:05,883 [INFO] URL scan requested: https://google.com
+2026-04-05 16:30:39,210 [INFO] URL scan requested: https://chatgpt.com/
+2026-04-05 16:30:54,437 [INFO] URL scan requested: https://chatgpt.com
+2026-04-05 16:31:13,194 [INFO] URL scan requested: https://www.youtube.com/
+2026-04-05 16:51:17,835 [INFO] URL scan requested: https://google.com
+2026-04-05 16:51:40,820 [INFO] URL scan requested: https://google.com
+2026-04-05 16:58:51,141 [INFO] URL scan requested: https://google.com
+2026-04-05 17:07:58,429 [INFO] URL scan requested: https://google.com
+2026-04-05 17:33:34,911 [INFO] Starting PhishGuard AI server...
+2026-04-05 17:34:51,857 [INFO] User logged in: dummy@gmail.com
+2026-04-05 17:35:06,078 [INFO] URL scan requested: https://google.com
+2026-04-05 17:35:55,098 [INFO] URL scan requested: https://youtube.com
+2026-04-05 17:36:29,007 [INFO] URL scan requested: http://free-gift-card.xyz
+2026-04-05 17:38:29,096 [INFO] URL scan requested: http://go0gle.com
+2026-04-05 17:38:37,813 [INFO] URL scan requested: https://go0gle.com
+2026-04-05 17:41:17,869 [INFO] URL scan requested: https://www.galgotiasuniversity.edu.in/
+2026-04-05 18:50:57,690 [INFO] Starting PhishGuard AI server...
+2026-04-05 19:12:15,823 [INFO] User logged in: dummy@gmail.com
+2026-04-05 19:13:37,739 [INFO] URL scan requested: https://paypal-login.xyz
+2026-04-05 19:14:19,949 [INFO] URL scan requested: https://youtube.com
+2026-04-05 19:18:24,285 [INFO] URL scan requested: https://google.com
+2026-04-06 21:22:44,295 [INFO] Starting PhishGuard AI server...
+2026-04-06 21:26:25,438 [WARNING] Failed login attempt for: dummy@gmail.com
+2026-04-06 21:27:24,926 [INFO] New user registered: dummy@gmail.com
+2026-04-06 21:28:05,707 [INFO] URL scan requested: https://google.com
+2026-04-06 21:43:18,594 [INFO] URL scan requested: https://whatsapp.com
+2026-04-06 21:44:06,559 [INFO] URL scan requested: https://micr0sOft.com
+2026-04-06 21:56:44,289 [INFO] Starting PhishGuard AI server...
+2026-04-06 21:57:32,375 [INFO] URL scan requested: https://microSOft.com
+2026-04-06 21:57:52,466 [INFO] URL scan requested: https://micrOs0ft.com
+2026-04-06 21:58:15,031 [INFO] URL scan requested: https://MicroSoft.com
+2026-04-06 22:01:05,650 [INFO] URL scan requested: https://G00gle
+2026-04-06 22:01:17,142 [INFO] URL scan requested: https://G00gle.com
+2026-04-06 22:01:35,767 [INFO] URL scan requested: https://G00gle.com
+2026-04-08 13:53:39,880 [INFO] Starting PhishGuard AI server...
+2026-04-08 13:54:37,934 [INFO] User logged in: dummy@gmail.com
+2026-04-08 13:54:56,353 [INFO] URL scan requested: https://google.com
+2026-04-08 13:55:22,468 [INFO] URL scan requested: https://google.com
+2026-04-08 13:57:29,966 [INFO] URL scan requested: https://paypal.secure-login.verify-account.xyz
+2026-04-08 14:16:08,531 [INFO] URL scan requested: https://google.com
+2026-04-08 14:21:33,105 [INFO] URL scan requested: https://sbi-secure-login-update.xyz
+2026-04-08 19:26:01,672 [INFO] Starting PhishGuard AI server...
+2026-04-08 19:29:35,875 [INFO] User logged in: dummy@gmail.com
+2026-04-08 19:30:26,019 [INFO] URL scan requested: https://bit.ly/3xyzFakeLogin
+2026-04-08 19:31:17,395 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_78a323ac48304846a2813b225300caac.jpeg
+2026-04-08 19:31:25,537 [INFO] OCR complete: SAFE score=0
+2026-04-08 19:37:13,690 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-08 19:37:15,506 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-04-08 19:37:51,760 [INFO] URL scan requested: http://xn--googl-fsa.com
+2026-04-08 19:47:24,907 [INFO] URL scan requested: http://xn--googl-fsa.com
+2026-04-08 19:51:44,461 [INFO] URL scan requested: http://xn--googl-fsa.com
+2026-04-08 19:54:43,227 [INFO] URL scan requested: http://xn--googl-fsa.com
+2026-04-08 19:56:05,149 [INFO] URL scan requested: http://xn--googl-fsa.com
+2026-04-08 19:57:49,936 [INFO] URL scan requested: https://g00gle-login.com
+2026-04-08 19:58:53,787 [INFO] URL scan requested: https://g00gle-login.com
+2026-04-29 20:56:39,199 [INFO] Starting PhishGuard AI server...
+2026-04-29 20:58:34,483 [WARNING] Failed login attempt for: dummy@gmail.com
+2026-04-29 20:58:44,068 [WARNING] Failed login attempt for: dummy@gmail.com
+2026-04-29 21:00:36,928 [INFO] New user registered: shivani@gmail.com
+2026-04-29 21:01:08,099 [INFO] URL scan requested: https://google.com
+2026-04-29 21:02:51,162 [INFO] URL scan requested: http://test.in
+2026-04-29 21:03:14,032 [INFO] URL scan requested: https://test.in
+2026-04-30 11:40:35,045 [INFO] Starting PhishGuard AI server...
+2026-04-30 11:44:20,017 [INFO] New user registered: pawan@gmail.com
+2026-04-30 11:45:01,788 [INFO] URL scan requested: https://google.com
+2026-04-30 11:45:47,201 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_150ed6f7a0d544cdbac900bfd9e09f35.jpeg
+2026-04-30 11:45:56,628 [INFO] OCR complete: SAFE score=0
+2026-04-30 11:46:31,126 [INFO] Loading VoiceDetector model...
+2026-04-30 11:46:31,131 [INFO] VoiceDetector model loaded.
+2026-04-30 11:48:07,514 [INFO] Phone check: 876624****
+2026-04-30 11:52:39,609 [INFO] Starting PhishGuard AI server...
+2026-04-30 11:55:43,769 [INFO] User logged in: pawan@gmail.com
+2026-05-02 09:22:13,199 [INFO] Starting PhishGuard AI server...
+2026-05-02 09:23:21,524 [INFO] User logged in: pawan@gmail.com
+2026-05-02 09:23:44,762 [INFO] URL scan requested: https://google.com
+2026-05-02 09:28:30,991 [INFO] URL scan requested: https://google.com
+2026-05-02 09:34:42,503 [INFO] URL scan requested: http://g00gle.com
+2026-05-02 09:53:34,265 [INFO] Starting PhishGuard AI server...
+2026-05-02 09:54:25,639 [INFO] URL scan requested: http://g00gle.com
+2026-05-02 09:54:35,223 [INFO] LLM explain requested for: http://g00gle.com, score=60, reasons=['No HTTPS', 'Typo-squatting of google']
+2026-05-02 09:54:35,593 [INFO] LLM explanation result: None
+2026-05-02 11:07:12,157 [INFO] Starting PhishGuard AI server...
+2026-05-02 11:29:03,055 [INFO] User logged in: pawan@gmail.com
+2026-05-02 11:29:16,756 [INFO] URL scan requested: http://g00gle.com
+2026-05-02 11:29:26,114 [INFO] LLM explain requested for: http://g00gle.com, score=60, reasons=['No HTTPS', 'Typo-squatting of google']
+2026-05-02 11:29:26,258 [INFO] LLM explanation result: None
+2026-05-02 11:45:23,108 [INFO] Starting PhishGuard AI server...
+2026-05-02 11:47:05,814 [INFO] URL scan requested: https://gttp://g00gle,com
+2026-05-02 11:47:14,922 [INFO] LLM explain requested for: https://gttp://g00gle,com, score=0, reasons=['Invalid URL format']
+2026-05-02 11:47:15,746 [INFO] LLM explanation result: None
+2026-05-02 11:49:52,668 [INFO] Starting PhishGuard AI server...
+2026-05-02 11:50:36,260 [INFO] URL scan requested: https://g00gle.in
+2026-05-02 11:51:12,879 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_2f8168f3b5354d619d51607b5265a935.jpeg
+2026-05-02 11:51:21,562 [INFO] OCR complete: SAFE score=0
+2026-05-02 12:23:45,716 [INFO] Starting PhishGuard AI server...
+2026-05-02 12:24:47,066 [INFO] Loading VoiceDetector model...
+2026-05-02 12:24:47,068 [INFO] VoiceDetector model loaded.
+2026-05-02 12:25:08,482 [INFO] LLM explain requested for: [Voice scan], score=12, reasons=['Less common audio format (.ogg) — often used in scam recordings']
+2026-05-02 12:25:12,477 [INFO] LLM explanation result: The verdict is clear: the URL is safe. This means that, based on our analysis, i
+2026-05-02 14:44:08,221 [INFO] Starting PhishGuard AI server...
+2026-05-02 14:46:21,495 [INFO] User logged in: pawan@gmail.com
+2026-05-02 14:46:21,634 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:46:22,250 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:46:22,253 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:46:22,518 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:47:18,304 [INFO] Loading VoiceDetector model...
+2026-05-02 14:47:18,304 [INFO] VoiceDetector model loaded.
+2026-05-02 14:49:40,500 [ERROR] Unhandled Exception: name 'ALLOWED_IMAGE_EXTENSIONS' is not defined
+2026-05-02 14:49:45,095 [ERROR] Unhandled Exception: name 'ALLOWED_IMAGE_EXTENSIONS' is not defined
+2026-05-02 14:58:14,770 [INFO] Starting PhishGuard AI server...
+2026-05-02 14:58:26,043 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:37,769 [INFO] User logged in: pawan@gmail.com
+2026-05-02 14:58:38,497 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:38,498 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:38,764 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:38,811 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:40,121 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:40,138 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:40,432 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:40,446 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:58:52,063 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_8fbe0615a1374f409cbdffb5a71c9327.jpeg
+2026-05-02 14:58:58,133 [INFO] OCR complete: SAFE score=0
+2026-05-02 14:59:26,355 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:26,364 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:26,611 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:26,670 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:34,333 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:34,445 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:34,708 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:34,715 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:41,475 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:41,480 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:41,725 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 14:59:41,803 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 15:03:39,107 [INFO] User logged in: pawan@gmail.com
+2026-05-02 15:03:39,179 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 15:03:39,795 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 15:03:39,800 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-02 15:03:40,060 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:40:23,344 [INFO] Starting PhishGuard AI server...
+2026-05-04 01:41:12,203 [INFO] User logged in: pawan@gmail.com
+2026-05-04 01:41:12,376 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:12,993 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:13,019 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:13,257 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:20,108 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:20,111 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:20,376 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:20,443 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:24,229 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:24,240 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:24,488 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:24,550 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:26,411 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 01:41:26,739 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 02:08:00,114 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 02:08:00,439 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 02:08:06,749 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 02:08:06,758 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 02:08:06,994 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 02:08:07,074 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 23:42:51,411 [INFO] Starting PhishGuard AI server...
+2026-05-04 23:51:35,844 [INFO] User logged in: pawan@gmail.com
+2026-05-04 23:51:36,628 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 23:51:36,635 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 23:51:36,894 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 23:51:36,996 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 23:51:51,354 [INFO] URL scan requested: https://google.com
+2026-05-04 23:52:52,173 [INFO] URL scan requested: http://google.com
+2026-05-04 23:53:05,695 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-04 23:53:05,961 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 22:56:01,968 [INFO] Starting PhishGuard AI server...
+2026-05-05 23:00:07,020 [INFO] User logged in: pawan@gmail.com
+2026-05-05 23:00:07,890 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:00:07,893 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:00:08,154 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:00:08,198 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:00:32,669 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:00:32,936 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:01:00,198 [INFO] User logged in: pawan@gmail.com
+2026-05-05 23:01:00,281 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:01:00,902 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:01:00,905 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:01:01,151 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:01:03,088 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:01:03,404 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:20:57,529 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:20:57,542 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:20:57,786 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:20:57,849 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:22:59,005 [INFO] New user registered: singh.shivani16052023@gmail.com
+2026-05-05 23:22:59,124 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:22:59,730 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:22:59,732 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:22:59,978 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:07,869 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:08,136 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:26,294 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:26,541 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:28,529 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:28,844 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:29,101 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:29,149 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:36,827 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:36,831 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:37,078 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:37,139 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:37,182 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:37,499 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:37,936 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:38,245 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:38,248 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:38,559 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:57,742 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:58,029 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:58,192 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:23:58,293 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:24:00,914 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:24:01,225 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:25:36,034 [INFO] Starting PhishGuard AI server...
+2026-05-05 23:26:16,294 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:16,558 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:16,786 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:16,791 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:29,480 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:29,718 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:29,963 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:29,969 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:31,230 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-05 23:26:31,537 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 16:08:40,755 [INFO] Starting PhishGuard AI server...
+2026-05-07 16:09:44,724 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-05-07 16:09:45,008 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 16:09:45,613 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 16:09:45,614 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 16:09:45,857 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 16:09:58,311 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 16:09:58,577 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 16:10:16,011 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-05-07 16:10:24,539 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-05-07 21:38:33,612 [INFO] Starting PhishGuard AI server...
+2026-05-07 21:39:11,055 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-05-07 21:39:11,791 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:39:11,794 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:39:12,053 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:39:12,102 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:39:13,180 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:39:13,495 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:40:13,595 [WARNING] Failed login attempt for: singh.shivani16052023@gmail.com
+2026-05-07 21:41:55,726 [INFO] New user registered: singh.shivani16052023@gmail.com
+2026-05-07 21:41:55,848 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:41:56,461 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:41:56,471 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:41:56,729 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:42:10,584 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:42:10,847 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-07 21:44:20,739 [ERROR] Unhandled Exception: can't compare offset-naive and offset-aware datetimes
+2026-05-07 21:44:43,710 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-05-07 21:44:50,862 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-05-07 21:45:53,936 [ERROR] Unhandled Exception: can't compare offset-naive and offset-aware datetimes
+2026-05-08 11:20:33,870 [INFO] Starting PhishGuard AI server...
+2026-05-08 11:22:06,700 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-05-08 11:22:07,574 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:22:07,578 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:22:07,838 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:22:07,888 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:22:09,420 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:22:09,765 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:23:22,598 [ERROR] Unhandled Exception: Invalid hash method ''.
+2026-05-08 11:23:40,614 [ERROR] Unhandled Exception: Invalid hash method ''.
+2026-05-08 11:23:51,011 [ERROR] Unhandled Exception: Invalid hash method ''.
+2026-05-08 11:24:06,200 [ERROR] Unhandled Exception: Invalid hash method ''.
+2026-05-08 11:24:15,617 [ERROR] Unhandled Exception: Invalid hash method ''.
+2026-05-08 11:38:41,441 [ERROR] Unhandled Exception: Invalid hash method ''.
+2026-05-08 11:40:07,808 [INFO] Starting PhishGuard AI server...
+2026-05-08 11:40:53,894 [WARNING] Failed login attempt for: singh.shivani16052023@gmail.com
+2026-05-08 11:41:03,271 [WARNING] Failed login attempt for: singh.shivani16052023@gmail.com
+2026-05-08 11:42:50,684 [INFO] New user registered: john@gmail.com
+2026-05-08 11:42:50,892 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:42:51,513 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:42:51,517 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:42:51,764 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:42:54,748 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:42:55,073 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:44:12,551 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:44:12,797 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:45:40,773 [INFO] User logged in: john@gmail.com
+2026-05-08 11:45:40,932 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:45:41,553 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:45:41,555 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-05-08 11:45:41,807 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 20:42:17,470 [INFO] Starting PhishGuard AI server...
+2026-06-02 20:52:00,086 [INFO] Starting PhishGuard AI server...
+2026-06-02 20:53:18,191 [WARNING] Failed login attempt for: dummy@gmail.com
+2026-06-02 20:53:52,205 [INFO] New user registered: shivani123@gmail.com
+2026-06-02 20:53:52,344 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 20:53:52,687 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 20:53:52,926 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 20:53:53,004 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 20:54:09,495 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 20:54:09,762 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-02 22:47:47,183 [INFO] Starting PhishGuard AI server...
+2026-06-03 20:24:35,979 [INFO] Starting PhishGuard AI server...
+2026-06-04 08:58:33,611 [INFO] Starting PhishGuard AI server...
+2026-06-04 08:59:53,069 [WARNING] Failed login attempt for: shivani@gmail.com
+2026-06-04 09:00:09,993 [WARNING] Failed login attempt for: shivanichauhan2923@gmail.com
+2026-06-04 09:01:12,110 [INFO] New user registered: demouser@gmail.com
+2026-06-04 09:01:12,277 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:01:12,885 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:01:12,889 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:01:13,137 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:05:12,250 [INFO] URL scan requested: https://gmail.com
+2026-06-04 09:06:08,652 [INFO] URL scan requested: https://http//payP2l.com
+2026-06-04 09:06:38,005 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:38,011 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:38,270 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:38,332 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:43,586 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:43,863 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:43,980 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:44,022 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:52,200 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:52,206 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:52,451 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:06:52,529 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:45:08,127 [INFO] Starting PhishGuard AI server...
+2026-06-04 09:45:53,219 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:46:00,299 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:46:00,605 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:46:00,821 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 09:46:00,883 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 10:02:21,291 [INFO] Starting PhishGuard AI server...
+2026-06-04 10:06:46,328 [INFO] Starting PhishGuard AI server...
+2026-06-04 10:07:58,968 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-06-04 10:33:39,804 [INFO] Starting PhishGuard AI server...
+2026-06-04 10:37:47,139 [ERROR] Unhandled Exception: can't compare offset-naive and offset-aware datetimes
+2026-06-04 10:37:54,481 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-06-04 10:38:12,866 [ERROR] Unhandled Exception: can't compare offset-naive and offset-aware datetimes
+2026-06-04 10:39:22,193 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-06-04 10:41:04,165 [INFO] Starting PhishGuard AI server...
+2026-06-04 10:42:07,538 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-06-04 10:42:47,317 [ERROR] Unhandled Exception: can't subtract offset-naive and offset-aware datetimes
+2026-06-04 10:53:24,878 [INFO] Starting PhishGuard AI server...
+2026-06-04 10:54:54,509 [ERROR] Unhandled Exception: can't compare offset-naive and offset-aware datetimes
+2026-06-04 11:05:36,638 [INFO] Starting PhishGuard AI server...
+2026-06-04 13:34:54,472 [INFO] Starting PhishGuard AI server...
+2026-06-04 13:37:32,759 [ERROR] Unhandled Exception: can't compare offset-naive and offset-aware datetimes
+2026-06-04 13:44:29,701 [INFO] Starting PhishGuard AI server...
+2026-06-04 13:46:44,691 [INFO] Password hash upgraded to bcrypt for: singh.shivani16052023@gmail.com
+2026-06-04 13:46:44,693 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-06-04 13:46:44,961 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 13:46:45,595 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 13:46:45,600 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 13:46:45,858 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 13:47:19,742 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 13:47:19,750 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 13:47:20,006 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 13:47:20,055 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:05:02,435 [INFO] Starting PhishGuard AI server...
+2026-06-04 14:08:54,797 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:08:54,896 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:08:55,203 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:08:55,588 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:09:03,324 [INFO] SMS scan: 'jhvjznxcHSDfoiLJMCNKJSGV...'
+2026-06-04 14:09:07,685 [INFO] SMS result: SAFE (score=0)
+2026-06-04 14:09:29,568 [INFO] SMS scan: 'urgent!!!!this-is-fake...'
+2026-06-04 14:09:30,900 [INFO] SMS result: SAFE (score=20)
+2026-06-04 14:09:40,484 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:09:40,495 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:09:40,750 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:09:40,812 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:09:51,429 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:09:51,679 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:11,781 [INFO] SMS scan: 'xhsndhsdcahxheAHUBF...'
+2026-06-04 14:10:13,235 [INFO] SMS result: SAFE (score=0)
+2026-06-04 14:10:20,405 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:20,420 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:20,668 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:20,765 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:25,850 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:26,115 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:26,300 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:10:26,348 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:27:01,951 [INFO] Starting PhishGuard AI server...
+2026-06-04 14:28:04,293 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:04,434 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:04,622 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:04,681 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:15,445 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:15,743 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:15,900 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:15,963 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:28:28,590 [INFO] URL scan requested: https://google.com
+2026-06-04 14:28:59,032 [INFO] URL scan requested: https://facebook.com
+2026-06-04 14:29:33,079 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:33,096 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:33,345 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:33,408 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:55,185 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:55,452 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:58,056 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:58,375 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:58,396 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:29:58,702 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:30:05,063 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:30:05,297 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:30:05,485 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:30:05,531 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:32:39,672 [INFO] Starting PhishGuard AI server...
+2026-06-04 14:34:56,961 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:34:56,990 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:34:57,209 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:34:57,322 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:35:33,101 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_5b694d6015074e88971294c97e5b49aa.jpeg
+2026-06-04 14:35:45,286 [INFO] OCR complete: SAFE score=0
+2026-06-04 14:42:27,092 [INFO] SMS scan: 'hgfgvh...'
+2026-06-04 14:42:28,483 [INFO] SMS result: SAFE (score=0)
+2026-06-04 14:43:32,295 [INFO] Starting PhishGuard AI server...
+2026-06-04 14:44:13,351 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:44:13,445 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:44:13,664 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:44:13,743 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:53:56,673 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-06-04 14:53:56,788 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:53:57,397 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:53:57,402 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:53:57,656 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 14:54:32,305 [INFO] URL scan requested: https://www.youtube.com/watch?v=test
+2026-06-04 14:55:26,260 [INFO] URL scan requested: https://www.microsoft.com/en-in
+2026-06-04 14:55:59,903 [INFO] URL scan requested: https://sbi-kyc-update.xyz/login
+2026-06-04 14:56:35,222 [INFO] URL scan requested: http://facebook-login-security-warning.xyz
+2026-06-04 14:57:08,661 [INFO] URL scan requested: https://www.paypal.com-security-login.com
+2026-06-04 14:57:34,846 [INFO] URL scan requested: https://google.com.secure-login.xyz
+2026-06-04 15:44:46,045 [INFO] Starting PhishGuard AI server...
+2026-06-04 15:45:46,268 [INFO] Starting PhishGuard AI server...
+2026-06-04 15:48:08,809 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:48:09,011 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:48:09,305 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:48:09,310 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:48:26,534 [INFO] URL scan requested: http://paypa1-security-login.com
+2026-06-04 15:48:52,400 [INFO] URL scan requested: http://paypa1-security-login.com
+2026-06-04 15:49:28,893 [INFO] URL scan requested: http://tinyurl.com/login-update
+2026-06-04 15:50:23,779 [INFO] URL scan requested: https://www.microsoft.com
+2026-06-04 15:52:21,501 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_25b2ddf97ce6416d87ca039457b919e8.jpeg
+2026-06-04 15:52:26,397 [INFO] OCR complete: SAFE score=0
+2026-06-04 15:52:45,336 [INFO] Loading VoiceDetector model...
+2026-06-04 15:52:45,337 [INFO] VoiceDetector model loaded.
+2026-06-04 15:53:41,885 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:53:42,138 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:54:45,391 [INFO] New user registered: nishikaraj82@gmail.com
+2026-06-04 15:54:45,473 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:54:46,084 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:54:46,090 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 15:54:46,351 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 16:02:24,384 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-06-04 16:02:24,488 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 16:02:25,139 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 16:02:25,153 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 16:02:25,404 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-04 16:02:57,991 [INFO] URL scan requested: https://sbi-kyc-update.xyz/login
+2026-06-04 16:03:48,554 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_1442e22232c646d0a056a87da33be983.jpeg
+2026-06-04 16:03:58,560 [INFO] OCR complete: SAFE score=0
+2026-06-06 09:11:14,084 [INFO] Starting PhishGuard AI server...
+2026-06-06 09:11:52,901 [WARNING] Failed login attempt for: singh.shivani16052023@gmail.com
+2026-06-06 09:12:06,756 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-06-06 09:12:06,895 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:12:07,533 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:12:07,539 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:12:07,783 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:12:46,573 [INFO] New user registered: rohit20050928@gmail.com
+2026-06-06 09:12:46,677 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:12:47,287 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:12:47,294 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:12:47,550 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:41,519 [INFO] Password hash upgraded to bcrypt for: rohit20050928@gmail.com
+2026-06-06 09:14:41,521 [INFO] User logged in: rohit20050928@gmail.com
+2026-06-06 09:14:41,609 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:42,236 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:42,241 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:42,499 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:50,429 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:50,433 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:50,687 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:14:50,737 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-06 09:15:20,357 [INFO] Phone check: 931023****
+2026-06-06 09:16:21,412 [INFO] Phone check: 731687****
+2026-06-06 09:16:25,044 [INFO] Phone check: 731687****
+2026-06-10 13:07:32,882 [INFO] Starting PhishGuard AI server...
+2026-06-10 13:08:37,033 [WARNING] Failed login attempt for: sunflower16052023@gmail.com
+2026-06-10 14:25:25,734 [INFO] Starting PhishGuard AI server...
+2026-06-10 14:26:31,323 [INFO] User logged in: singh.shivani16052023@gmail.com
+2026-06-10 14:26:31,515 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-10 14:26:32,125 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-10 14:26:32,134 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-10 14:26:32,392 [ERROR] Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-06-10 14:27:22,766 [INFO] URL scan requested: https://google.com
+2026-06-10 14:32:20,548 [INFO] URL scan requested: https://•	http://secure-login-paypal.com.verify-user.ru
+2026-06-10 14:33:07,121 [INFO] URL scan requested: http://update-bank-info-now.com/login
+2026-06-10 14:39:33,254 [INFO] SMS scan: 'shftsjcv...'
+2026-06-10 14:39:34,755 [INFO] SMS result: SAFE (score=0)
+2026-06-10 14:40:50,556 [INFO] OCR temp saved: C:\Users\USER\AppData\Local\Temp\ocr_60df3d85d25a45afa5982b8a0f820353.jpeg
+2026-06-10 14:41:00,635 [INFO] OCR complete: SAFE score=0
