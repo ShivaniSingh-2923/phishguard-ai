@@ -1,25 +1,25 @@
-flask==2.3.3
-flask-cors==4.0.0
-flask-limiter==3.5.0
-flask-jwt-extended==4.6.0
-werkzeug==2.3.7
-
-gunicorn
-
-numpy==1.24.4
+pandas
+numpy==1.26.4
 scikit-learn==1.3.2
-scipy==1.11.4
-pandas==2.0.3
-joblib
+scipy==1.10.0
 
 tldextract
 whois
 requests
-rapidfuzz
+gunicorn
 
-pymongo==4.6.1
+flask>=3.0
+flask-cors>=4.0
+flask-limiter>=3.5
+flask-jwt-extended>=4.6
+werkzeug>=3.0
+python-dotenv>=1.0
+
+pymongo>=4.6
 bcrypt
-python-dotenv
+groq
 
 Pillow
-groq
+rapidfuzz
+opencv-python-headless
+joblib
